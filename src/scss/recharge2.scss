@@ -1,0 +1,263 @@
+@import 'mixin.scss';
+
+[data-page~=recharge] {
+    .recharge-nav{
+        width: 100%;
+        height: 50px;
+        border-bottom: 1px solid #e4e4e4;
+        position: fixed;
+        top: 0;
+        left: 0;
+        z-index: 200;
+        background-color: #fff;
+        li{
+            width: 24%;
+            height: 50px;
+            line-height: 50px;
+            margin-left: 7%;
+            float: left;
+        }
+        .active{
+            border-bottom: 2px solid #0086d1;
+            color: #0086d1;
+        }
+    }
+    //控制
+    .control{
+        width: 100%;
+        padding: 50px 0 50px 0;
+        overflow: auto;
+        li{
+            width: 100%;
+            padding-bottom:10px;
+        }
+    }
+    //手机充值
+    //手机号
+    .input-number{
+        width: 100%;
+        height: 62px;
+        padding: 10px 0 0 20px;
+        position: relative;
+        background-color: #fff;
+        input{
+            width: 84%;
+            height: 36px;
+            font-size: 24px;
+            border: none;
+            display: block;
+        }
+        .error{
+            color: #f25a2b;
+            display: none;
+        }
+        .info{
+            color: #c9c9c9;
+            display: none;
+        }
+        img{
+            position: absolute;
+            right: 16px;
+            top: 14px;
+            width: 28px;
+            height: 28px;
+        }
+    }
+    //话费&流量nav
+    .phone-nav{
+        width: 100%;
+        height: 60px;
+        border-bottom: 1px solid #e4e4e4;
+        li{
+            width: 50%;
+            height: 30px;
+            font-size: 14px;
+            line-height: 30px;
+            border-right: 1px solid #e4e4e4;
+            text-align: center;
+            float: left;
+        }
+    }
+    //话费
+    .bill{
+        width: 100%;
+        padding: 0 7px 30px;
+        .each-bill{
+            width: 33.3%;
+            padding: 10px 8px 0;
+            .bill-box{
+                width: 100%;
+                height: 70px;
+                border: 1px solid #e4e4e4;
+                border-radius: 6px;
+                color: #353535;
+                padding-top: 8px;
+            }
+            .choose{
+                border: 1px solid #27a1e5;
+                p{
+                    color: #27a1e5;
+                }
+            }
+        }
+    }
+    //qb
+    .type{
+        width: 100%;
+        border-top: 1px solid #e4e4e4;
+        padding: 0 20px;
+        li{
+            height: 49px;
+            line-height: 49px;
+            border-bottom: 1px solid #e4e4e4;
+        }
+        .miane{
+            border: none;
+            padding-right: 26px;
+            background-image: url(../img/logistics/menu_down.png);
+            background-size: 16px 16px;
+            background-repeat: no-repeat;
+            background-position: 99% 16px;
+        }
+    }
+    //qb
+    .qb-qb{
+        width: 100%;
+        padding-left: 15px;
+        .qb-box{
+            height: 40px;
+            line-height: 40px;
+            text-align: center;
+            float: left;
+            width: 28%;
+            border-radius: 5px;
+            border: 1px solid #e4e4e4;
+            margin: 0 5% 15px 0;
+        }
+        .choose{
+            border: 1px solid #27a1e5;
+            color: #27a1e5;
+        }
+    }
+
+    //底部弹窗
+    .cover-box{
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 0;
+        z-index: 3;
+        overflow: hidden;
+        background: rgba(0,0,0,0.5);
+    }
+    .bottom-box{
+        width: 100%;
+        height: 330px;
+        background-color: #fff;
+        position: absolute;
+        left: 0;
+        bottom: -330px;
+        z-index: 3;
+        padding-top: 50px;
+        transition:all 0.3s;
+        -webkit-transition: all 0.3s;
+        -moz-transition: all 0.3s;
+        -ms-transition: all 0.3s;
+        -o-transition: all 0.3s;
+        img{
+            width: 29px;
+            height: 29px;
+            position: absolute;
+            right: 10px;
+            top: 10px;
+        }
+        .each-spec{
+            width: 33.3%;
+            height: 52px;
+            .each{
+                width: 90%;
+                margin-left: 5%;
+                border-radius: 6px;
+                height: 40px;
+                line-height: 40px;
+                border: 1px solid #e5e5e5;
+            }
+            .choose{
+                border: 2px solid #27a1e5;
+            }
+        }
+    }
+    .box-up{
+        transform: translateY(-330px);
+        -webkit-transform: translateY(-330px);
+        -moz-transform: translateY(-330px);
+        -ms-transform: translateY(-330px);
+        -o-transform: translateY(-330px);
+    }
+    
+    //油卡页面
+    .oil-page{
+        width: 100%;
+        .kinds{
+            width: 100%;
+            height: 70px;
+            border-bottom: 1px solid #e4e4e4;
+            padding: 10px;
+            .oCard{
+                width: 48.5%;
+                height: 50px;
+                border: 2px solid #e4e4e4;
+                padding: 5px 0 0 60px;
+                .gou{
+                    display: none;
+                    width: 20px;
+                    height: 20px;
+                    position: absolute;
+                    left: 100%;
+                    top: 100%;
+                    margin-left: -20px;
+                    margin-top: -20px;
+                }
+                img{
+                    position: absolute;
+                    width: 40px;
+                    height: 40px;
+                    left: 14px;
+                    top: 5px;
+                }
+            }
+            .choose{
+                border: 2px solid #27a1e5;
+                .gou{
+                    display: block;
+                }
+            }
+        }
+        .card-msg{
+            width: 100%;
+            padding-bottom: 10px;
+            border-bottom: 1px solid #e4e4e4;
+            background-color: #f4f4f4;
+            .sin{
+                border-bottom: 1px solid #e4e4e4;
+            }
+        }
+    }
+    
+    
+    //立即充值
+    .recharge-btn{
+        width: 100%;
+        height: 50px;
+        color: #fff;
+        background-color: #27a1e5;
+        font-size: 16px;
+        position: absolute;
+        left: 0;
+        bottom: 0;
+    }
+    .disabled{
+        background-color: #e4e4e4;
+    }
+}

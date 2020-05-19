@@ -1,0 +1,30 @@
+
+[data-page~=service-contract] {
+  .service-contract {
+    padding: 10px;
+    h3 {
+      font-weight: 800;
+      line-height: 2em;
+    }
+    .title {
+      text-align: center;
+    }
+    p {
+      text-indent: 2em;
+      line-height: 2em;
+    }
+    .p1 {
+      text-indent: 0;
+      padding-left: 2em;
+    }
+    .p-a {
+      text-indent: 3em;
+    }
+    .p2 {
+      text-indent: 0;
+    }
+    span {
+      font-weight: 800;
+    }
+  }
+}

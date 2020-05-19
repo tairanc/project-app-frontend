@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<img width="100%"  src="https://www.tairanmall.com/themes/wapmall/images/bg.jpg">
+<img width="100%"  src="https://www.tairanmall.com/themes/wapmall/images/pic.png" style="position: absolute;top:0">
+<div class="appGuide_main">
+    <div class="appGuide_content">
+        <div class="app_download_btn"><a id="downloadAppLink"  href="javascript:;"><img src="https://www.tairanmall.com/themes/wapmall/images/btn.png" width="100%"></a></div>
+        <p class="copyright">©TRC.COM　泰然城电子商务有限公司　版权所有</p>
+    </div>
+</div>
+<!-- 微信提示遮罩层 -->
+<div id="weixinBrowserMask" class="weixin-download-mask">
+    <img width="100%" height="100%" src="https://www.tairanmall.com/themes/wapmall/images/zhezhao.png">
+</div>
+
+<script>
+
+    !function(win,doc){
+        var $appOpenLink = doc.getElementById('openAppURL'),
+                $weChatDiv = doc.getElementById('weixinBrowserMask'),
+                $downloadLink = doc.getElementById('downloadAppLink'),
+                app_download_link = '',
+                u = navigator.userAgent,
+                locked = false,
+                redirect = location.search.match(/redirect=([^&]*)/);
+        redirect = decodeURIComponent(redirect ? redirect[1] : '')
+        var jumpUrl = 'trmall://open_link_in_new_window?url='+base64encode(utf16to8(redirect)),
+                app = navigator.appVersion;
+
+        var browser = {
+            versions: function () {
+                var u = navigator.userAgent, app = navigator.appVersion;
+                return {         //移动终端浏览器版本信息
+                    trident: u.indexOf('Trident') > -1, //IE内核
+                    presto: u.indexOf('Presto') > -1, //opera内核
+                    webKit: u.indexOf('AppleWebKit') > -1, //苹果、谷歌内核
+                    gecko: u.indexOf('Gecko') > -1 && u.indexOf('KHTML') == -1, //火狐内核
+                    mobile: !!u.match(/AppleWebKit.*Mobile.*/), //是否为移动终端
+                    ios: !!u.match(/\(i[^;]+;( U;)? CPU.+Mac OS X/), //ios终端
+                    android: u.indexOf('Android') > -1 || u.indexOf('Linux') > -1, //android终端或uc浏览器
+                    iPhone: u.indexOf('iPhone') > -1, //是否为iPhone或者QQHD浏览器
+                    iPad: u.indexOf('iPad') > -1, //是否iPad
+                    webApp: u.indexOf('Safari') == -1 //是否web应该程序，没有头部与底部
+                };
+            }(),
+            language: (navigator.browserLanguage || navigator.language).toLowerCase()
+        }
+
+
+        if (browser.versions.mobile) {//判断是否是移动设备打开。browser代码在下面
+            var ua = navigator.userAgent.toLowerCase();//获取判断用的对象
+            if (ua.match(/MicroMessenger/i) == "micromessenger") {
+                $weChatDiv.style.display = 'block';//在微信中打开
+            }
+            if (ua.match(/WeiBo/i) == "weibo") {
+                $weChatDiv.style.display = 'block';//在新浪微博客户端打开
+            }
+            if (ua.indexOf('qq/')>-1) {
+                $weChatDiv.style.display = 'block';//在QQ空间打开
+            }
+            if (browser.versions.ios) {
+                app_download_link = 'https://itunes.apple.com/cn/app/tai-he-wang/id954734297?mt=8';//是否在IOS浏览器打开
+            }
+            if(browser.versions.android){
+                var channel = decodeURIComponent(location.search).match(/channel\s*=\s*([^&]*)/);
+                var reg = /^(meiyouecpro|quanmamaecpro|babytreeecpro|xiangtuiecpro|liebaoecpro|batdocecpro|fanliecpro|tashequecpro|gedengecpro|mojiecpro|baiduszecpro|zhihuituiecpro|gedecpro|youdaoecpro|360ecpro|ipinyouecpro|souhuecpro|toutiaoecpro)$/i
+
+                channel = channel && reg.test(channel[1]) ? '_' + channel[1] : '';
+                app_download_link = 'http://dl.trc.com/trc'+ channel  +'.apk';//是否在安卓浏览器打开
+            }
+            $downloadLink.setAttribute('href',app_download_link);
+            // $appOpenLink.click();
+
+        } else {
+            $weChatDiv.style.display = 'none';
+        }
+
+// 唤起锁定，避免重复唤起
+        if (locked) {
+            return;
+        }
+        locked = true;
+        var ua = navigator.userAgent.toLowerCase();//获取判断用的对象
+        // 通过trc协议唤醒app
+        if ( ua.indexOf('qq/') > -1 || ( ua.indexOf('safari') > -1 && (ua.indexOf('os 9_') > -1 || ua.indexOf('os 10_') > -1)) ) {
+            // 方案一(a link click 唤醒)
+            var openAppLink = document.getElementById('openAppLink');
+            if (!openAppLink) {
+                openAppLink = document.createElement('a');
+                openAppLink.id = 'openAppLink';
+                openAppLink.style.display = 'none';
+                document.body.appendChild(openAppLink);
+            }
+            openAppLink.href = jumpUrl;
+            // 执行click
+            function customClickEvent() {
+                var clickEvt;
+                if (window.CustomEvent) {
+                    clickEvt = new window.CustomEvent('click', {
+                        canBubble: true,
+                        cancelable: true
+                    });
+                } else {
+                    clickEvt = document.createEvent('Event');
+                    clickEvt.initEvent('click', true, true);
+                }
+
+                return clickEvt;
+            }
+            openAppLink.dispatchEvent(customClickEvent());
+        }else{
+            // 方案二(iframe 唤醒,兼容性较好)
+            var ifr = document.createElement('iframe');
+            ifr.src = jumpUrl;
+            ifr.style.display = 'none';
+            document.body.appendChild(ifr);
+        }
+
+        // 唤起加锁，避免短时间内被重复唤起
+        setTimeout(function () {
+            locked = false;
+        }, 2500)
+    }(window,document);
+</script>
+</body>
+</html>

@@ -1,0 +1,29 @@
+@import "mixin.scss";
+	//服务协议
+	.vip-agreement-page {
+    padding: 10px;
+    background:#fff;
+    div {
+      line-height: 22px;
+      background: rgb(255, 255, 255);
+      text-indent: 2em;
+      margin-top: 16px;
+      margin-bottom: 16px;
+  }
+
+  text {
+      font-size: 14px;
+      font-family: 微软雅黑, "Microsoft YaHei";
+  }
+  .title {
+      text-align: center;
+      text-indent: 0em;
+      text {
+        font-weight: bold;
+        font-size: 16px;
+    }
+  }
+  .tileft {
+    text-indent: 0em;
+  }
+}

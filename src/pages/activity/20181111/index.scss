@@ -1,0 +1,545 @@
+@import '../../../scss/mixin.scss';
+
+[data-page~=lucky-draw] {
+    width: 100%;
+    //background-color: #fea4b5;
+    background-image: -webkit-linear-gradient(top, #a81021, #a70f21);
+    .top {
+        width: 100%;
+        height: rem(623);
+        background-image: url("/src/img/activity/20181111/draw_top.jpg");
+        background-size: 100%;
+        background-repeat: no-repeat;
+        position: relative;
+        overflow: hidden;
+        .tip {
+            padding-top: rem(315);
+        }
+        .rule {
+            width: rem(105);
+            height: rem(105);
+            position: absolute;
+            right: -5px;
+            top: 20px;
+            border-radius: rem(105);
+        }
+
+        // 中奖消息轮播
+        .winning-radio {
+            width: 100%;
+            height: rem(60);
+            line-height: rem(60);
+            color: #fff3ea;
+            background-color: #60050f;
+            font-size: rem(24);
+            top: 0;
+            position: absolute;
+            padding-left: 35px;
+            overflow: hidden;
+            .swiper-container {
+                height: 100%;
+            }
+            .swiper-wrapper {
+                height: 100%;
+                /*-webkit-transition-timing-function: linear; !*之前是ease-out*!
+                -moz-transition-timing-function: linear;
+                -ms-transition-timing-function: linear;
+                -o-transition-timing-function: linear;
+                transition-timing-function: linear;*/
+            }
+            .swiper-slide {
+                height: 100%;
+                @include multiLine(1);
+            }
+            .ring {
+                width: 15px;
+                height: 13px;
+                position: absolute;
+                top: 50%;
+                left: 13px;
+                transform: translate(0,-50%);
+            }
+
+        }
+        .activity_time {
+            width: rem(157);
+            height: rem(152);
+            position: absolute;
+            left: rem(58);
+            top: rem(423);
+            z-index: 20;
+        }
+    }
+    .dobber-button {
+        width: rem(111);
+        height: rem(145);
+        display: inline-block;
+        background-image: url("/src/img/activity/20181111/dobber.png");
+        background-size: 100%;
+        background-repeat: no-repeat;
+        position: fixed;
+        right: rem(32);
+        top:rem(924);
+        z-index: 20;
+    }
+    .draw-area {
+        width: 100%;
+        height: rem(834);
+        position: relative;
+        top: rem(-207);
+        overflow: hidden;
+        .marquee-bg {
+            width: rem(682);
+            height: rem(682);
+            position: absolute;
+            top:1px;
+            left:rem(39);
+            z-index: 10;
+        }
+        .ball1 {
+            position: absolute;
+            width: rem(30);
+            top: rem(270);
+            left: rem(10);
+        }
+        .ball2 {
+            position: absolute;
+            width: rem(40);
+            top: rem(608);
+            left: rem(18);
+        }
+        .draw {
+            width: rem(710);
+            height: rem(710);
+            position: absolute;
+            top:-12px;
+            transform: translate(-50%, 0);
+            left: 50%;
+            z-index: 20;
+            .draw-turntable {
+                position: absolute;
+                width: 100%;
+                height: 100%;
+                left: 0;
+                top: 0;
+                transform: rotate(0deg);
+                .draw-bg {
+                    //transform: rotate(22deg);
+                }
+                img {
+                    width: 100%;
+                }
+            }
+            .draw-button {
+                position: absolute;
+                width: rem(140);
+                height: rem(172);
+                transform: translate(-50%, -50%);
+                left: 50%;
+                top: 50%;
+            }
+            .each-prize {
+                position: absolute;
+                z-index: 10;
+                .img-wraper {
+                    width: rem(118);
+                    height: rem(134);
+                    text-align: center;
+                    //background: red;
+                    img {
+                        width: rem(118);
+                        height: rem(134);
+                    }
+                }
+            }
+            .each-prize0 {
+                transform: rotate(135deg);
+            }
+            .each-prize1 {
+                transform: rotate(90deg);
+            }
+            .each-prize2 {
+                transform: rotate(45deg);
+            }
+            .each-prize3 {
+                transform: rotate(0deg);
+            }
+            .each-prize4 {
+                transform: rotate(-45deg);
+            }
+            .each-prize5 {
+                transform: rotate(-90deg);
+            }
+            .each-prize6 {
+                transform: rotate(-135deg);
+            }
+            .each-prize7 {
+                transform: rotate(-180deg);
+            }
+        }
+        .draw-bottom {
+            width: rem(556);
+            position: absolute;
+            bottom: 5px;
+            left: 50%;
+            transform: translate(-50%,0);
+            img {
+                width: 100%;
+            }
+        }
+        .tip {
+            position: absolute;
+            bottom: -8px;
+            left: 50%;
+            transform: translate(-50%,0);
+        }
+    }
+
+    .task-area {
+        margin-top: rem(-176);
+        margin-bottom: rem(80);
+        .title {
+            background-image: url("/src/img/activity/20181111/title_bar.jpg");
+            background-size: 100%;
+            background-repeat: no-repeat;
+            height: 40px;
+            line-height: 40px;
+            width: 100%;
+            margin-bottom: 20px;
+            img {
+                width: 14px;
+                height: 14px;
+                margin-right: 9px;
+                margin-left: 9px;
+            }
+        }
+        .task-list {
+            margin: 0 rem(30);
+            li {
+                position: relative;
+                width: rem(695);
+                height: rem(140);
+                background: #ffffff;
+                border-radius: 9px;
+                margin-bottom: 10px;
+                padding: 0 rem(40);
+                box-shadow: inset 1px 1px 10px #ffe0e6, inset 1px -1px 10px #ffe0e6, inset -1px 1px 10px #ffe0e6, inset -1px -1px 10px #ffe0e6;
+                img {
+                    width: rem(80);
+                    height: rem(80);
+                    margin-top: rem(30);
+                    margin-right: rem(25);
+                }
+                .content {
+                    margin-top: rem(35);
+                    p {
+                        font-size: rem(30);
+                    }
+                    span {
+                        font-size: rem(22);
+                        color: #a77135;
+                    }
+                }
+                .finished {
+                    width: 55px;
+                    height: 15px;
+                    margin-top: 0;
+                    vertical-align: -2px;
+                }
+                .share-button {
+                    width: rem(140);
+                    height: rem(60);
+                    line-height: rem(62);
+                    border-radius: rem(60);
+                    background-image: -webkit-linear-gradient(left, #fce891, #f0c349);
+                    box-shadow: inset -5px -5px 10px #faa82b;
+                    text-align: center;
+                    color: #67270a;
+                    font-size: rem(26);
+                    margin-top: rem(40);
+                    position: absolute;
+                    right: rem(40);
+                }
+            }
+        }
+    }
+    .my-prize {
+        margin-top: rem(-60);
+        padding: rem(20) 0 rem(40) 0;
+        .title {
+            background-image: url("/src/img/activity/20181111/title_bar1.jpg");
+            background-size: 100%;
+            background-repeat: no-repeat;
+            height: 40px;
+            line-height: 40px;
+            width: 100%;
+            margin-bottom: 20px;
+            img {
+                width: 14px;
+                height: 14px;
+                margin-right: 9px;
+                margin-left: 9px;
+            }
+        }
+        .myPrize-record-wraper {
+
+        }
+
+        .myPrize-record {
+            margin: 0 rem(30);
+            width: rem(690);
+            padding: rem(45) rem(35) rem(45) rem(35);
+            border-radius: rem(17);
+            background-color: #ffffff;
+            box-shadow: inset 1px 1px 10px #ffe0e6, inset 1px -1px 10px #ffe0e6, inset -1px 1px 10px #ffe0e6, inset -1px -1px 10px #ffe0e6;
+            .myPrize-record-wrapper::-webkit-scrollbar {display:none}
+            .myPrize-record-wrapper::-o-scrollbar {display:none}
+            .myPrize-record-wrapper::-moz-scrollbar {display:none}
+            .myPrize-record-wrapper {
+                max-height: rem(972);
+                overflow: scroll;
+            }
+            li {
+                width: rem(300);
+                height: rem(140);
+                background-image: url("/src/img/activity/20181111/gift_bg.png");
+                background-size: 100%;
+                border-radius: rem(18);
+                margin: rem(11) 0;
+                position: relative;
+                .prize-detail {
+                    position: absolute;
+                    width: 100%;
+                    left: 0;
+                    top: 50%;
+                    transform: translate(0, -50%);
+                    height: rem(140);
+                    line-height: rem(32);
+                    padding-top: rem(26);
+                    .gift_title {
+                        font-size: rem(30);
+                        color: #e51229;
+                    }
+                    .sub_title {
+                        color: #9a5918;
+                        font-size: rem(20);
+                    }
+                }
+            }
+        }
+        .no-prize {
+            position: relative;
+            width: rem(630);
+            height: rem(340);
+            img {
+                width: rem(110);
+                height: rem(102);
+                position: absolute;
+                transform: translate(-50%, 0);
+                left: 50%;
+                top: rem(70);
+            }
+            .button {
+                width: rem(300);
+                height: rem(80);
+                line-height: rem(80);
+                border-radius: rem(40);
+                background-image: -webkit-linear-gradient(left, #ffe05e, #fac330);
+                box-shadow: inset -5px -5px 10px #faa82b;
+                text-align: center;
+                color: #67270a;
+                font-size: rem(30);
+                position: absolute;
+                transform: translate(-50%, 0);
+                left: 50%;
+                top: rem(90);
+            }
+            .no-prize-tip {
+                position: absolute;
+                left: 50%;
+                transform: translate(-50%, 0);
+                top: rem(205);
+            }
+        }
+
+        .add {
+            font-size: 13px;
+            text-align: center;
+            width: 100%;
+            color: #999999;
+            .loading {
+                background-image: url(/src/img/home/loading.gif);
+                background-size: 20px;
+                background-repeat: no-repeat;
+                height: 30px;
+                line-height: 30px;
+                background-position: 5px;
+                padding: 10px 30px;
+            }
+        }
+    }
+
+    .rule {
+        .rule-modal {
+            position: fixed;
+            left: rem(75);
+            top: rem(155);
+            width: rem(600);
+            height: rem(818);
+            z-index: 150;
+            background-image: url(/src/img/activity/20181111/rule_modal.png);
+            background-size: 100% 100%;
+            padding: rem(138) rem(50) rem(180) rem(50);
+            .rule-content {
+                width: 100%;
+                color: #9d6740;
+                font-size: rem(20);
+                max-height: rem(503);
+                overflow: scroll;
+            }
+            .sure-button {
+                width: rem(410);
+                height: rem(80);
+                border-radius: rem(40);
+                bottom: 32px;
+                position: absolute;
+                left: 50%;
+                transform: translate(-50%);
+            }
+            .close {
+                position: absolute;
+                bottom: rem(-100);
+                left: 50%;
+                transform: translate(-50%, 0);
+                width: rem(60);
+                height: rem(60);
+                border-radius: rem(60);
+                img {
+                    width: 100%;
+                }
+            }
+        }
+
+    }
+
+    .win {
+        .modal-bg {
+            position: fixed;
+            left: 50%;
+            top: rem(268);
+            transform: translate(-50%, 0);
+            width: rem(578);
+            height: rem(633);
+            z-index: 150;
+        }
+        .losing-lottery {
+            background-image: url(/src/img/activity/20181111/losing_lottery.png);
+            background-size: 100% 100%;
+            width: 100%;
+            height: 100%;
+        }
+        .win-modal {
+            background-image: url(/src/img/activity/20181111/win_bg.png);
+            background-size: 100% 100%;
+            width: 100%;
+            height: 100%;
+        }
+        .content {
+            width: rem(400);
+            height: rem(260);
+            position: absolute;
+            left: 50%;
+            top: rem(139);
+            transform: translate(-50%, 0);
+            img {
+                position: absolute;
+                left: 50%;
+                top: 0;
+                transform: translate(-50%, 0);
+                width: 100%;
+                height: 100%;
+            }
+            .tip {
+                left: 0;
+                top: 0;
+                position: absolute;
+                display: block;
+                padding: 5px;
+                background: #8a7eff;
+                border-radius: 30px 30px 0 30px;
+                color: #ffffff;
+                z-index: 2;
+            }
+        }
+        .title {
+            position: absolute;
+            font-size: rem(36);
+            color: #9d5622;
+            font-weight: bold;
+            bottom: rem(180);
+            left: 50%;
+            transform: translate(-50%, 0);
+            width: 100%;
+            text-align: center;
+        }
+        .button {
+            width: rem(220);
+            height: rem(80);
+            display: inline-block;
+            position: absolute;
+            border-radius: rem(40);
+        }
+        .button-center {
+            width: rem(420);
+            top: 81%;
+            left: 50%;
+            transform: translate(-50%, 0);
+        }
+        .button-left {
+            bottom: rem(60);
+            left: rem(60);
+        }
+        .button-right {
+            bottom: rem(60);
+            right: rem(60);
+        }
+        .close {
+            position: absolute;
+            bottom: rem(-100);
+            left: 50%;
+            transform: translate(-50%, 0);
+            width: rem(70);
+            height: rem(70);
+            border-radius: rem(70);
+            img {
+                width: 100%;
+            }
+        }
+    }
+
+    .lead-share {
+        width: 100%;
+        position: fixed;
+        top: 0;
+        left: 0;
+        z-index: 100;
+        .share-icon {
+            .lead-img {
+                width: rem(331);
+                right: rem(45);
+                position: absolute;
+                top: 0;
+                z-index: 150;
+            }
+            .button {
+                width: rem(252);
+                position: absolute;
+                left: 50%;
+                transform: translate(-50%, 0);
+                bottom: 15%;
+                z-index: 150;
+            }
+        }
+    }
+
+}

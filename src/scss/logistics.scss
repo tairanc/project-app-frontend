@@ -1,0 +1,136 @@
+@import 'mixin.scss';
+
+[data-page~=logistics-page] {
+    //包裹nav
+    .packages-nav{
+        width: 100%;
+        height: 40px;
+        border-bottom: 1px solid #e4e4e4;
+        li{
+            width: 90px;
+            height: 40px;
+            line-height: 40px;
+        }
+        .active{
+            border-bottom: 3px solid #27a1e5;
+            color: #27a1e5;
+        }
+    }
+    //商品
+    .package-goods{
+        width: 100%;
+        padding: 10px 14px 0 14px;
+        .goods-img{
+            width: 74px;
+            height: 74px;
+            overflow: hidden;
+            position: relative;
+            margin-right: 12px;
+            img{
+                width: 74px;
+            }
+            span{
+                width: 25px;
+                height: 15px;
+                display: block;
+                background-color: #e18998;
+                position: absolute;
+                right: 0;
+                bottom: 0;
+                text-align: center;
+                color: #fff;
+                line-height: 15px;
+                border-radius: 6px;
+            }
+        }
+    }
+    //订单状态
+    .order-state{
+        width: 100%;
+        height: 60px;
+        border-bottom: 10px solid #f4f4f4;
+        line-height: 50px;
+        padding: 0 14px;
+    }
+    //无物流信息
+    .no-msg{
+        width: 100%;
+        height: 400px;
+        background-image: url(../img/logistics/no-package.png);
+        background-repeat: no-repeat;
+        background-size: 196px 100px;
+        background-position: center 96px;
+    }
+    //国际--国内物流
+    .logistics-nav{
+        width: 100%;
+        height: 50px;
+        border-bottom: 1px solid #e4e4e4;
+        @include flexBox;
+        @include flexAround;
+        @include flexVtc;
+        li{
+            width: 56px;
+            height: 30px;
+        }
+        .choose{
+            color: #353535;
+            border-bottom: 2px solid #353535;
+        }
+    }
+    //快递信息
+    .package-msg{
+        width: 100%;
+        height: 60px;
+        padding: 12px 14px 0;
+    }
+    //物流跟踪信息
+    .logistics-msg{
+        width: 100%;
+        padding: 20px 0 18px 22px;
+        ul{
+            width: 100%;
+            padding-left: 18px;
+            border-left: 2px solid #e4e4e4;
+            padding-bottom: 14px;
+        }
+        li{
+            padding-top: 12px;
+            width: 95%;
+            border-bottom: 1px solid #e4e4e4;
+            color: #999;
+            position: relative;
+            p{
+                margin-bottom: 10px;
+            }
+            span{
+                display: block;
+                width: 14px;
+                height: 14px;
+                border-radius: 7px;
+                background-color: #e4e4e4;
+                position: absolute;
+                left: -26px;
+                top: 14px;
+                border: 2px solid #fff;
+            }
+            &:nth-child(1){
+                padding-top: 0;
+                color: #27a1e5;
+                span{
+                    width: 16px;
+                    height: 16px;
+                    border-radius: 8px;
+                    top: 0px;
+                    left: -27px;
+                    background-color: #27a1e5;
+                    border: 2px solid #caf0ff;
+                }
+            }
+            &:nth-last-child(1){
+                border-bottom: none;
+            }
+        }
+        
+    }
+}

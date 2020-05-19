@@ -1,0 +1,596 @@
+@import  "../../scss/mixin.scss";
+
+[data-page~=enterprise-register] {
+    background: url(/src/img/enterpriseBuy/register/bg.jpg);
+    background-size: 100% 100%;
+    overflow: hidden;
+    header {
+        .logo {
+            width: rem(150);
+            height: rem(30);
+            top: rem(24);
+            left: rem(26);
+        }
+        .model {
+            width: rem(108);
+            height: rem(180);
+
+        }
+        .envelope {
+            width: rem(328);
+            height: rem(288);
+        }
+        p {
+            padding: rem(378) 0 rem(44);
+            color: #f8f3e2;
+            font-size: rem(36);
+        }
+        .animationEnvelope{
+            top: rem(130);
+            right: rem(216);
+            animation: animationEnvelope 0.5s linear forwards;
+            -moz-animation: animationEnvelope 0.5s linear forwards;
+            -o-animation: animationEnvelope 0.5s linear forwards;
+            -webkit-animation: animationEnvelope 0.5s linear forwards;
+            -ms-animation: animationEnvelope 0.5s linear forwards;
+        }
+        .animationModel {
+            top: rem(66);
+            left: rem(207);
+            z-index: 1;
+            animation: animationModel 0.9s linear forwards;
+            -moz-animation: animationModel 0.9s linear forwards;
+            -o-animation: animationModel 0.9s linear forwards;
+            -webkit-animation: animationModel 0.9s linear forwards;
+            -ms-animation: animationModel 0.9s linear forwards;
+        }
+        @keyframes animationEnvelope {
+            0% {
+                top: rem(-288);
+                right: rem(-328);
+            }
+            100% {
+                top: rem(130);
+                right: rem(216);
+            }
+        }
+        @keyframes animationModel {
+            0% {
+                top: rem(-280);
+                left: rem(-280);
+            }
+            100% {
+                top: rem(66);
+                left: rem(207);
+            }
+        }
+    }
+
+    .register {
+        display: inline-block;
+        width: rem(660);
+        height: rem(650);
+        padding: rem(20) rem(36) rem(60);
+        margin-bottom: rem(30);
+        background: #fff;
+        border-radius: rem(10);
+    }
+
+    input {
+        width: 100%;
+        height: rem(100);
+        padding-left: rem(76);
+        border: none;
+        border-bottom: 1px solid #f4f4f4;
+        border-radius: 0;
+        color: #353535;
+        font-size: rem(30); 
+        text-overflow: ellipsis;
+        margin-bottom: 1px;
+    }
+
+    input[type="text"]:disabled {
+        background: #fff;
+        color:#000;
+        opacity: 1;
+        &::-webkit-input-placeholder {color:#c9c9c9;font-size: rem(30);}
+        &::-moz-placeholder {color:#c9c9c9;font-size: rem(30);}
+    }
+
+    .bottom-line {
+        position: absolute;
+        height: 1px;
+        width: 100%;
+        background-color: #f4f4f4;
+    }
+    .location-bottom-line {
+        top: rem(98);
+    }
+    .buy-bottom-line {
+        top: rem(302);
+    }
+    #detailed {
+        padding-left: 0;
+    }
+    #buy,#location {
+        float: left;
+        width: 70%;
+    }
+    //设置input placeholder
+    input::-webkit-input-placeholder { /* WebKit browsers */
+      color:#c9c9c9;
+      font-size: rem(30);
+    }
+    input:-moz-placeholder { /* Mozilla Firefox 4 to 18 */
+      color: #c9c9c9;
+      font-size: rem(30);
+    }
+    input::-moz-placeholder { /* Mozilla Firefox 19+ */
+      color: #c9c9c9;
+      font-size: rem(30);
+    }
+    input:-ms-input-placeholder { /* Internet Explorer 10+ */
+      color: #c9c9c9;
+      font-size: rem(30);
+    }
+
+    .registerTel {
+        img {
+            width: rem(40);
+            height: rem(42);
+            left: rem(6);
+        }
+        .company {
+            top: rem(24);
+        }
+        .contact {
+            top: rem(126);
+        }
+        .phone {
+            top: rem(228);
+        }
+        .lock {
+            top: rem(330);
+            z-index: 1;
+        } 
+        .send-code {
+            top: rem(32);
+            right: 0;
+            font-size: rem(30);
+        }
+    }
+
+    .upToCompany {
+        .shady {
+            width: 100%;
+            height: 100%;
+            position: fixed;
+            top: 0;
+            left: 0;
+            background-color: #000;
+            z-index: 1;
+            opacity: 0.5;
+        }
+        img {
+            width: rem(40);
+            height: rem(42);
+        }
+        .location {
+            left: rem(6);
+            top: rem(28);
+        }
+        .buy {
+            left: rem(6);
+            top: rem(232);
+        }
+        .companyTel {
+            left: rem(6);
+            top: rem(334);
+        }
+        .choose-arrow {
+            width: rem(16);
+            height: rem(30);
+            margin: rem(-6) 0 0 rem(20);
+        }
+        .choose {
+            position: absolute;
+            right: 0;
+            color: #c9c9c9;
+            font-size: rem(28);
+        }
+        .choose-addr {
+            top: rem(28);
+        }
+        .choose-buy {
+            top: rem(230);
+        }
+    }
+
+    //采购类型选择弹框
+    .sel-content {
+        position: fixed;
+        left: 0;
+        bottom: 0;
+        width: 100%;
+        height: rem(850);
+        background-color: #fff;
+        z-index: 2;
+        h3 {
+            height: rem(100);
+            line-height: rem(100);
+            color: #353535;
+            font-size: rem(30);
+        }
+        .close {
+            width: rem(26);
+            height: rem(26);
+            position: absolute;
+            top: rem(36);
+            right: rem(30);
+        }
+        .sel-content-slide {
+            height: rem(640);
+            overflow: scroll;
+        }
+        li {
+            height: rem(98);
+            line-height: rem(98);
+            border-bottom: 1px solid #eee;
+            color: #353535;
+            font-size: rem(28);
+            text-align: left;
+            margin-left: rem(24);
+        }
+        .select {
+            width: rem(36);
+            height: rem(36);
+            float: right;
+            margin: rem(30) rem(30) 0 0;
+        }
+        .confirm {
+            height: rem(110);
+            width: 100%;
+            padding: rem(15) rem(20) rem(15);
+            background: #fff;
+            text-align: center;
+        }
+        .confirm-btn {
+            height: 100%;
+            width: 100%;
+            background: #353535;
+            border-radius: rem(10);
+            color: #bdab81;
+            font-size: rem(30);
+        }
+    }
+
+    //选择采购类型弹窗动画
+    .animation1 {
+        bottom: 0;
+        animation: animation1 0.3s linear forwards;
+        -moz-animation: animation1 0.3s linear forwards;
+        -o-animation: animation1 0.3s linear forwards;
+        -webkit-animation: animation1 0.3s linear forwards;
+        -ms-animation: animation1 0.3s linear forwards;
+    }
+    .animation2 {
+        bottom: rem(-850);
+        z-index: -1;
+        /*animation: animation2 0.3s linear forwards;
+        -moz-animation: animation2 0.3s linear forwards;
+        -o-animation: animation2 0.3s linear forwards;
+        -webkit-animation: animation2 0.3s linear forwards;
+        -ms-animation: animation2 0.3s linear forwards; */
+    }
+
+    @keyframes animation1 {
+        0% {
+            bottom: rem(-850);
+        }
+        100% {
+            bottom: 0;
+        }
+    }
+    /* @keyframes animation2 {
+        0% {
+            bottom: 0;
+        }
+        100% {
+            bottom: rem(-850);
+        }
+    } */
+
+    //选择地址
+    .choose-address {
+        position: fixed;
+        left: 0;
+        bottom: 0;
+        height: rem(600);
+        width: 100%;
+        background-color: #fff;
+        z-index: 2;
+        .nav {
+            height: rem(100);
+            padding-top: rem(40);
+            background-color: #fff;
+            border-bottom: 1px solid #f4f4f4;
+            padding-left: rem(30);
+            padding-right: rem(30);
+            color: #666;
+            font-size: rem(28);
+            margin-bottom: rem(40);
+            .active-one {
+                border-bottom: 2px solid #e60a30;
+                color: #e60a30;
+            }
+            li {
+                float: left;
+                margin-right: rem(30);
+                max-width: rem(140);
+                white-space: nowrap;
+                overflow: hidden;
+                text-overflow: ellipsis;
+            }
+            .confirm {
+                float: right;
+            }
+        }
+        .address-content {
+            height: rem(400);
+            width: 100%;
+            text-align: left;
+        }
+    }
+    .animationAddr1 {
+        bottom: 0;
+        animation: animationAddr1 0.3s linear forwards;
+        -moz-animation: animationAddr1 0.3s linear forwards;
+        -o-animation: animationAddr1 0.3s linear forwards;
+        -webkit-animation: animationAddr1 0.3s linear forwards;
+        -ms-animation: animationAddr1 0.3s linear forwards;
+    }
+    .animationAddr2 {
+        z-index: -1;
+        bottom: rem(-600);
+/*         animation: animationAddr2 0.3s linear forwards;
+        -moz-animation: animationAddr2 0.3s linear forwards;
+        -o-animation: animationAddr2 0.3s linear forwards;
+        -webkit-animation: animationAddr2 0.3s linear forwards;
+        -ms-animation: animationAddr2 0.3s linear forwards; */
+    }
+    @keyframes animationAddr1 {
+        0% {
+            bottom: rem(-600);
+        }
+        100% {
+            bottom: 0;
+        }
+    }
+/*     @keyframes animationAddr2 {
+        0% {
+            bottom: 0;
+        }
+        100% {
+            bottom: rem(-600);
+        }
+    } */
+
+    //  地址滚动选择
+    .address-content {
+        padding-left: rem(30);
+    }
+    .each-list {
+        width: 100%;
+        height: rem(450);
+        overflow: auto;
+        .each-address {
+            height: rem(90);
+            font-size: rem(28);
+        }
+        .each-cityaddress {
+            height: rem(90);
+            font-size: rem(28);
+        }
+        .each-countyaddress {
+            height: rem(90);
+            font-size: rem(28);
+        }   
+        .active-one {
+            color: #e60a30;
+        }
+    }
+
+    .next-step {
+        width: rem(598);
+        height: rem(138);
+        line-height: rem(138);
+        margin: rem(12) 0 rem(2);
+        background: url(/src/img/enterpriseBuy/register/btn.png);
+        background-size: 100% 100%;
+        color: #fefefe;
+        font-size: rem(32);
+    }
+
+    .protocol {
+        font-size: rem(20);
+        span {
+            color: #999;
+        }
+        a {
+            color: #bea474;
+        }
+    }
+
+    .registerSucc {
+        .success {
+            width: rem(464);
+            height: rem(343);
+            margin: 0 0 rem(30) rem(30);
+        }
+        .check {
+            position: absolute;
+            top: rem(306);
+            left: rem(144);
+            width: rem(36);
+            height: rem(36);
+        }
+        .successTxt {
+            position: absolute;
+            top: rem(304);
+            left: rem(194);
+            color: #353535;
+            font-size: rem(28);
+        }
+        .promoteTxt {
+           // position: absolute;
+            //top: rem(354);
+            //left: rem(118);
+            color: #999;
+            font-size: rem(24);
+        }
+    }
+
+    .arrow {
+        position: absolute;
+        left: 50%;
+        margin-left: rem(-18);
+        .arrowWrap {
+            height: rem(16);
+            margin-bottom: rem(2);
+        }
+        span {
+            display: inline-block;
+            height: 1px;
+            width: rem(24);           
+        }
+        .arrowLeft {
+            margin-right: rem(-4); 
+            transform:rotate(45deg);                
+            -ms-transform:rotate(45deg);     /* IE 9 */
+            -moz-transform:rotate(45deg);    /* Firefox */
+            -webkit-transform:rotate(45deg); /* Safari 和 Chrome */
+            -o-transform:rotate(45deg);  /* Opera */
+        }
+        .arrowRight {
+            margin-left: rem(-4); 
+            transform:rotate(-45deg);
+            -ms-transform:rotate(-45deg);     /* IE 9 */
+            -moz-transform:rotate(-45deg);    /* Firefox */
+            -webkit-transform:rotate(-45deg); /* Safari 和 Chrome */
+            -o-transform:rotate(-45deg);  /* Opera */
+        }
+        .arrow1Div{
+            top: 0;
+            .arrow1 {
+                background-color: #72644d;
+                animation: animationArrow1 0.8s linear forwards infinite;
+                -moz-animation: animationArrow1 0.8s linear forwards infinite;
+                -o-animation: animationArrow1 0.8s linear forwards infinite;
+                -webkit-animation: animationArrow1 0.8s linear forwards infinite;
+                -ms-animation: animationArrow1 0.8s linear forwards infinite;
+            }
+        }
+        .arrow2Div{
+            top: rem(20);
+            .arrow2 {
+                background-color: #95815e;
+                animation: animationArrow2 0.8s linear forwards infinite;
+                -moz-animation: animationArrow2 0.8s linear forwards infinite;
+                -o-animation: animationArrow2 0.8s linear forwards infinite;
+                -webkit-animation: animationArrow2 0.8s linear forwards infinite;
+                -ms-animation: animationArrow2 0.8s linear forwards infinite;                
+            }
+        }
+        .arrow3Div{
+            top: rem(40);
+            .arrow3 {
+                background-color: #bea474;
+                animation: animationArrow3 0.8s linear forwards infinite;
+                -moz-animation: animationArrow3 0.8s linear forwards infinite;
+                -o-animation: animationArrow3 0.8s linear forwards infinite;
+                -webkit-animation: animationArrow3 0.8s linear forwards infinite;
+                -ms-animation: animationArrow3 0.8s linear forwards infinite;                
+            }
+        }
+
+        @keyframes animationArrow1 {
+            0% {
+                background-color: #bea474;
+            }
+            50% {
+                background-color: #95815e;
+            }
+            100% {
+                background-color: #72644d;
+            }
+        }
+
+        @keyframes animationArrow2 {
+            0% {
+                background-color: #95815e;
+            }
+            50% {
+                background-color: #bea474;
+            }
+            100% {
+                background-color: #72644d;
+            }
+        }
+
+        @keyframes animationArrow3 {
+            0% {
+                background-color: #95815e;
+            }
+            50% {
+                background-color: #72644d;
+            }
+            100% {
+                background-color: #bea474;
+            }
+        }
+    }
+
+    .privilege{
+        display: inline-block;
+        width: rem(656);
+        height: rem(590);
+        padding: rem(27) 0;
+        margin: rem(112) 0 rem(100);
+        background: url(/src/img/enterpriseBuy/register/shadow.png);
+        background-size: 100% 100%; 
+        .little-circle {
+            display: inline-block;
+            width: 4px;
+            height: 4px;
+            margin-bottom: 4px;
+            border: 1px solid #5c554c;
+            border-radius: 4px;
+        }
+        h4 {
+            display: inline-block;
+            margin: 0 rem(23) rem(46);
+            color: #9e917d;
+            font-size: rem(32);
+        }
+        li {
+            display: inline-block;
+            margin: rem(24) rem(42);
+            color: #bea474;
+            font-size: rem(28);
+        }
+        .line1 {
+            margin: rem(24) rem(34);
+        }
+        img {
+            width: rem(102);
+            height: rem(102);
+            margin-bottom: rem(16);
+        }
+    }
+
+    footer {
+        padding-bottom: rem(8);
+        color: #847a6b;
+        font-size: rem(24);
+    }
+}

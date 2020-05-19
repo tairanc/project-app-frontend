@@ -1,0 +1,169 @@
+{
+  "status": true,
+  "data":{
+    "valid_items":[
+      {
+        "shop_id": 2,
+        "shop_name": "测试店铺名称",
+        "shop_alias_name": "测试店铺别名",
+        "shop_type": "self",
+        "activity":[
+          {
+            "type":"common",
+            "name":"普通商品",
+            "items": [
+              {
+                "cart_id": 36,
+                "parent_id": 0,
+                "user_ident": "c9f0f895fb98ab9159f51fd0297e236d",
+                "user_id": 8,
+                "shop_id": 2,
+                "obj_type": "item",
+                "obj_ident": "item_20",
+                "item_id": 20,
+                "sku_id": 20,
+                "title": "\r\n联想 P1 16G 伯爵金 移动联通4G手机",
+                "image_default_id": "http://images.bbc.shopex123.com/images/59/9b/dc/8d8aed46e5fef773ac30be11afd75010998a1cb3.jpg",
+                "quantity": 1,
+                "is_checked": 1,
+                "package_id": null,
+                "params": null,
+                "selected_promotion": "test",
+                "created_time": 1484118594,
+                "modified_time": 1484118594,
+                "dlytmpl_id": 1,
+                "status": "onsale",
+                "store": {
+                  "total": 100,
+                  "freeze": 5
+                },
+                "weight": "1.000",
+                "valid": 1,
+                "spec_info": "颜色: 白; 尺码: 40",
+                "bn": "S56A5C3F684675",
+                "price": "100.00",
+                "market_price": ""
+              },
+              {
+                "cart_id": 37,
+                "parent_id": 0,
+                "user_ident": "c9f0f895fb98ab9159f51fd0297e236d",
+                "user_id": 8,
+                "shop_id": 2,
+                "obj_type": "item",
+                "obj_ident": "item_274",
+                "item_id": 60,
+                "sku_id": 274,
+                "title": "\r\n联想 P1 16G 伯爵金 移动联通4G手机",
+                "image_default_id": "http://images.bbc.shopex123.com/images/59/9b/dc/8d8aed46e5fef773ac30be11afd75010998a1cb3.jpg",
+                "quantity": 1,
+                "is_checked": 1,
+                "package_id": null,
+                "params": null,
+                "selected_promotion": "test",
+                "created_time": 1484122735,
+                "modified_time": 1484122735,
+                "dlytmpl_id": 1,
+                "status": "onsale",
+                "store": {
+                  "total": 100,
+                  "freeze": 5
+                },
+                "weight": "1.000",
+                "valid": 1,
+                "spec_info": "颜色: 白; 尺码: 40",
+                "bn": "S56A5C3F684675",
+                "price": "100.00",
+                "market_price": ""
+              }
+            ],
+            "total":{
+              "total_after_discount":6,
+              "total_discount":6,
+              "total_num":15,
+              "total_price": 1500,
+              "total_tax": 6,
+              "total_weight": 6
+            }
+          }
+        ],
+        "totalCart": {
+          "total_weight": 2,
+          "total_num": 2,
+          "total_price": 200,
+          "total_after_discount": 0,
+          "total_discount": 0,
+          "total_tax": 0
+        }
+      }
+    ],
+    "invalid_items":[
+     {
+        "cart_id": 36,
+        "parent_id": 0,
+        "user_ident": "c9f0f895fb98ab9159f51fd0297e236d",
+        "user_id": 8,
+        "shop_id": 2,
+        "obj_type": "item",
+        "obj_ident": "item_20",
+        "item_id": 20,
+        "sku_id": 20,
+        "title": "\r\n联想 P1 16G 伯爵金 移动联通4G手机",
+        "image_default_id": "http://images.bbc.shopex123.com/images/59/9b/dc/8d8aed46e5fef773ac30be11afd75010998a1cb3.jpg",
+        "quantity": 1,
+        "is_checked": 1,
+        "package_id": null,
+        "params": null,
+        "selected_promotion": "test",
+        "created_time": 1484118594,
+        "modified_time": 1484118594,
+        "dlytmpl_id": 1,
+        "status": "onsale",
+        "store": {
+          "total": 100,
+          "freeze": 5
+        },
+        "weight": "1.000",
+        "valid": 1,
+        "spec_info": "颜色: 白; 尺码: 40",
+        "bn": "S56A5C3F684675",
+        "price": "100.00",
+        "market_price": ""
+      },
+     {
+        "cart_id": 37,
+        "parent_id": 0,
+        "user_ident": "c9f0f895fb98ab9159f51fd0297e236d",
+        "user_id": 8,
+        "shop_id": 2,
+        "obj_type": "item",
+        "obj_ident": "item_274",
+        "item_id": 60,
+        "sku_id": 274,
+        "title": "\r\n联想 P1 16G 伯爵金 移动联通4G手机",
+        "image_default_id": "http://images.bbc.shopex123.com/images/59/9b/dc/8d8aed46e5fef773ac30be11afd75010998a1cb3.jpg",
+        "quantity": 1,
+        "is_checked": 1,
+        "package_id": null,
+        "params": null,
+        "selected_promotion": "test",
+        "created_time": 1484122735,
+        "modified_time": 1484122735,
+        "dlytmpl_id": 1,
+        "status": "onsale",
+        "store": {
+          "total": 100,
+          "freeze": 5
+        },
+        "weight": "1.000",
+        "valid": 1,
+        "spec_info": "颜色: 白; 尺码: 40",
+        "bn": "S56A5C3F684675",
+        "price": "100.00",
+        "market_price": ""
+      }
+    ]
+  },
+  "msg": "初始化成功",
+  "redirect": null
+}

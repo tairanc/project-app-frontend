@@ -1,0 +1,146 @@
+@import 'mixin.scss';
+@include customIcon(detail-serve, detail-serve, 12px, 12px);
+.modalContainer {
+	position: fixed;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	overflow: hidden;
+	outline: 0;
+	z-index: 3;
+	-webkit-overflow-scrolling: touch;
+	background: rgba(0, 0, 0, .5);
+	opacity: 0;
+	.label {
+		display: inline-block;
+		height: 20px;
+		line-height: 22px;
+		font-size: 12px;
+		color: #fff;
+		padding: 0 4px;
+		border-radius: 2px;
+		margin-right: 3px;
+	}
+	.red-label {
+		background: #f88;
+	}
+	.deepred-label {
+		background: #E60A30;
+	}
+	.grey-label {
+		background: #999;
+	}
+	.yellow-label {
+		background: #fbb810;
+	}
+	.blue-label {
+		background: #27a1e5;
+	}
+	.free-postage-tag {
+		padding: 0px 3px;
+		display: inline-block;
+		font-size: 10px;
+		background: #fff;
+		color: #e60a30;
+		margin: 5px 10px;
+		border: 1px solid #e60a30;
+		border-radius: 3px;
+		margin-top: 8px;
+	}
+	.free-postage-tag-wrap {
+		display: inline-block;
+		.free-postage-tag {
+			vertical-align: 3px;
+		}
+	}
+	//促销说明
+	.goods-tax {
+		padding: 10px;
+		position: relative;
+		overflow: hidden;
+		.promotion-ti {
+			text-align: right;
+			line-height: 22px;
+			font-size: 13px;
+		}
+		.promotion-list {
+			width: 87%;
+			ul {
+				padding-right: 30px;
+				li {
+					display: inline-block;
+					font-size: 12px;
+					margin-right: 6px;
+					.detail-serve-icon {
+						vertical-align: -1.5px;
+						margin-right: 3px;
+					}
+				}
+			}
+		}
+	}
+	//详情页促销、服务说明弹窗公共样式
+	.modal {
+		padding: 10px;
+		position: absolute;
+		bottom: 0px;
+		left: 0px;
+		width: 100%;
+		top: 30%;
+		z-index: 11;
+		background: #fff;
+		.popModalHeader {
+			line-height: 31px;
+			text-align: center;
+			font-size: 15px;
+			color: #999;
+			position: relative;
+			.close-btn i {
+				position: absolute;
+				top: 5px;
+				right: 3px;
+				display: block;
+				width: 14px;
+				height: 14px;
+				z-index: 1000;
+				background: url(../img/icon/close/close-nobg-icon.png) center center no-repeat;
+			}
+		}
+	}
+
+
+		&.modalEnter {
+			display: block;
+			opacity: 1 !important;
+			transition: opacity 2000ms ease-in
+		}
+	/*	&.modalLeave {
+			display: none;
+			opacity: 0 !important;
+		}*/
+		.slide-enter {
+			transform: translate3d(0, 100%, 0);
+			&.slide-enter-active {
+				&.modal {
+					transform: translate3d(0, 0, 0);
+					transition: all 200ms linear;
+				}
+			}
+		}
+
+		.slide-leave {
+			transform: translate3d(0, 0, 0);
+			&.slide-leave-active {
+				&.modal {
+					transform: translate3d(0, 100%, 0);
+					transition: all 200ms linear;
+				}
+			}
+		}
+
+	}
+
+.modalEnter {display: block};
+.modalLeave {display: none};
+

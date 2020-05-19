@@ -1,0 +1,240 @@
+@import "./mixin.scss";
+
+[data-page~="vippayok"] {
+  position: relative;
+  background: #f4f4f4;
+  width: 100%;
+  overflow: hidden;
+  min-height: 100%;
+  .base-content{
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+    .background-img{
+      position: relative;
+      width: 100%;
+      height: 265px;
+      text-align: center;
+      .bgimg{
+        margin: 74px auto 0 auto;
+        width: 200px;
+        height: 192px;
+      }
+
+      .text-def{
+        position: absolute;
+        color: #966C50;
+        font-size: 13px;
+        left: 0;
+        right: 0;
+      }
+
+      .text-small{
+        bottom: 45px;
+        font-weight: 300;
+      }
+
+      .text-big{
+        bottom: 0;
+        font-size: 20px;
+      }
+    }
+    .btn-content{
+      margin: 70px auto 0 auto;
+      text-align: center;
+      .btn-payok{
+        width:rem(600);
+        height:44px;
+        margin-bottom: 25px;
+        font-size:17px;
+        font-weight:400;
+        color:rgba(255,255,255,1);
+        line-height:24px;
+      }
+      .btn-go-home{
+        background:linear-gradient(270deg,rgba(238,207,177,1) 0%,rgba(208,155,90,1) 100%);
+        border-radius:22px;
+      }
+      .btn-mine{
+        color:rgba(187,140,83,1);
+        border-radius:22px;
+        border:1px solid rgba(170,145,121,1);
+      }
+    }
+  }
+
+    // 弹窗
+    .alert-sure{
+      position: fixed;
+      top: 0;
+      left: 0;
+      background: rgba(0,0,0,0.7);
+      width: 100%;
+      height: 100%;
+      overflow: hidden;
+      text-align: center;
+      .alert-content{
+        width: rem(540);
+        height: rem(288);
+        background-color: white;
+        display: flex;
+        flex-direction: column;
+        margin: 65% auto;
+        border-radius: 5px;
+        .alert-top{
+          height: 75%;
+          display: flex;
+          flex-direction: column;
+          justify-content: flex-start;
+          .alert-title{
+            margin: 30px 0 10px 0;
+            color: #353535;
+            font-size: 17px;
+            font-weight: 900;
+          }
+          .alert-text{
+            font-size: 14px;
+            color: #353535;
+          }
+        }
+        .alert-btn{
+          border-top: 1px solid #E4E4E4;
+          display: flex;
+          flex-direction: row;
+          align-items: center;
+          justify-content: center;
+          height: 25%;
+          .alert-btn{
+            width: 50%;
+            text-align: center;
+            color: #BC8F57;
+            font-size: 17px;
+            display: flex;
+            align-content: center;
+            height: 100%;
+          }
+          .alert-btn-left{
+            border-right: 1px solid #E4E4E4;
+          }
+        }
+      }
+    }
+
+// 生日
+  .birth-day{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background: rgba(0,0,0,0.7);
+    z-index: 1;
+  } 
+  //生日选择弹框
+  .animation-birth {
+    .header{
+      width: 100%;
+      background:linear-gradient(237deg,rgba(36,32,28,1) 0%,rgba(53,53,53,1) 100%);
+      border-radius:20px 20px 0px 0px;
+      text-align: center;
+      position: absolute;
+      bottom: 250px;
+      .header-text{
+        color: #F4D1AA;
+        font-size: 13px;
+        width: 100%;
+      }
+      .large{
+        font-size: 19px;
+        margin: 15px 0;
+      }
+    }
+
+
+    .choose-birth {
+        position: absolute;
+        bottom: -250px;
+        width: 100%;
+        height: 250px;
+        z-index: 2;
+        background-color: #fff;
+        .nav {
+            height: 44px;
+            line-height: 44px;
+            padding: 0 rem(32);
+            background-color: #f4f4f4;
+            color: #666666;
+            font-size: 13px;
+            .cancel{
+                float: left;
+            }
+            .confirm {
+                float: right;
+                color: #e60a30;
+                font-size: 15px;
+            }
+        }
+        .fixed-line{
+            height: 1px;
+            width: 100%;
+            background-color: #f4f4f4;
+            z-index: 3;
+        }
+        .birth-content {
+            height: 200px;
+            width: 100%;
+            background-color: #fff;
+            text-align: center;
+            font-size: 16px;
+            color: #999;
+            .swiper-container {
+                display: inline-block;
+                width: 33.33%;
+                height: 210px;
+                overflow: hidden;
+            }
+            .swiper-slide {
+                height: 42.5px;
+                line-height: 42.5px;
+            }
+            .swiper-slide-active {
+                color: #353535;
+                font-size: 18px;
+            }
+        }
+    }
+}
+
+//生日、性别弹窗动画
+.animation1 {
+    animation: animation1 0.3s linear forwards;
+    -moz-animation: animation1 0.3s linear forwards;
+    -o-animation: animation1 0.3s linear forwards;
+    -webkit-animation: animation1 0.3s linear forwards;
+    -ms-animation: animation1 0.3s linear forwards;
+}
+.animation2 {
+    animation: animation2 0.3s linear forwards;
+    -moz-animation: animation2 0.3s linear forwards;
+    -o-animation: animation2 0.3s linear forwards;
+    -webkit-animation: animation2 0.3s linear forwards;
+    -ms-animation: animation2 0.3s linear forwards;
+}
+@keyframes animation1 {
+    0% {
+        bottom: -250px;
+    }
+    100% {
+        bottom: 0;
+    }
+}
+
+@keyframes animation2 {
+    0% {
+        bottom: 0;
+    }
+    100% {
+        bottom: -250px;
+    }
+}
+}

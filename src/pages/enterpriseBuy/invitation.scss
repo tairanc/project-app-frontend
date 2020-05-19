@@ -1,0 +1,106 @@
+@import  "src/scss/mixin.scss";
+
+[data-page~=invitation] {
+    background: url(/src/img/enterpriseBuy/invitation/bg.jpg);
+    background-size: 100% 100%;
+    .invite-text {
+        img {
+            width: rem(484);
+            height: rem(158);
+            margin: rem(112) 0 rem(88);
+        }
+    }
+    .invite-code {
+        width: rem(600);
+        height: rem(454);
+        margin-bottom: rem(76);
+        padding: rem(74) 0 rem(50);
+        background: url(/src/img/enterpriseBuy/invitation/inviteCode.png);
+        background-size: 100%;
+        h3 {
+            color: #847a6b;
+            font-size: rem(36);
+            letter-spacing: rem(2);
+        }
+        /* input, */p {
+            width: 90%;
+            height: rem(110);
+            line-height: rem(110);
+            margin:0 rem(26);
+            color: #353535;
+            font-size: rem(60);
+            //border: none;
+        }
+        .copy-code {
+            display: inline-block;
+            margin-bottom: rem(20);
+            color: #bcb09b;
+            font-size: rem(28);
+            letter-spacing: rem(2);
+        }
+        .invite-btn {
+            display: inline-block;
+            width: rem(470);
+            height: rem(134);
+            padding: 20px 0;
+            background: url(/src/img/enterpriseBuy/invitation/btn.png);
+            background-size: 100%;
+            button {
+                color: #fefefe;
+                font-size: rem(32);
+                letter-spacing: rem(2);
+            }
+        }
+        
+    }
+    .activity-rule {
+        display: inline-block;
+        width: rem(610);
+        height: rem(545);
+        margin-bottom: rem(80);
+        padding: rem(27) 0;
+        background: url(/src/img/enterpriseBuy/invitation/shadow.png);
+        background-size: 100%;
+        .little-circle {
+            display: inline-block;
+            width: 4px; 
+            height: 4px;
+            margin-bottom: 4px;
+            border: 1px solid #5c554c;
+            border-radius: 4px;
+        }
+        h4 {
+            display: inline-block;
+            margin: 0 rem(23) rem(27);
+            color: #9e917d;
+            font-size: rem(32);
+        }
+        li {          
+            color: #e3d2b7;
+            font-size: rem(32);
+            float: left; 
+        }              
+        img {
+            width: rem(108);
+            height: rem(108);
+            margin: rem(11) rem(48) rem(21) rem(52);
+        }
+        .inviteCode-li {
+            position: relative;
+        }
+        .inviteCode-txt {
+            position: absolute;
+            top: rem(16);
+            display: inline-block;
+            width: rem(320);
+            text-align : left;
+            line-height: rem(48);
+        }
+    }
+
+    footer {
+        padding-bottom: rem(18);
+        color: #847a6b;
+        font-size: rem(24);
+    }
+}

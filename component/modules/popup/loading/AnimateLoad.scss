@@ -1,0 +1,109 @@
+@import "../../../mixin.scss";
+
+:local{
+	//弹窗加载
+	.fixedLoad{
+		position:fixed;
+		top:40%;
+		left:50%;
+		width:100px;
+		z-index:0;
+		transform: translate3d(-50%,-50%,0);
+		text-align:center;
+	}
+	.spaceLoad{
+		padding-top:50%;
+		text-align:center;
+	}
+	.animateArea{
+		width:45px;
+		height:45px;
+		display: inline-block;
+		position:relative;
+	}
+	.ball{
+		width:15px;
+		height:15px;
+		border-radius:50%;
+		position:absolute;
+		top:15px;
+	}
+	
+	.blueBall{
+		background:#27a1e5;
+		left:0;
+		z-index:2;
+		animation: \rowRotateLeft 1.8s infinite linear;
+	}
+	
+	.redBall{
+		background:#f55;
+		left:30px;
+		z-index:1;
+		animation: \rowRotateRight 1.8s infinite linear;
+	}
+	
+	.loadText{
+		color:#c9c9c9;
+		font-size:12px;
+		margin-top:15px;
+	}
+	
+	@keyframes \rowRotateLeft {
+		0%{
+			left:0;
+			transform: scale(1);
+			z-index:2;
+		}
+		49.9%{
+			z-index:2;
+		}
+		50%{
+			left:30px;
+			transform: scale(1);
+			z-index:1;
+		}
+		75%{
+			left:15px;
+			transform: scale(.7);
+			z-index:1;
+		}
+		99.9%{
+			z-index:1;
+		}
+		100%{
+			left:0;
+			transform: scale(1);
+			z-index:2;
+		}
+	}
+	
+	@keyframes \rowRotateRight {
+		0%{
+			left:30px;
+			transform: scale(1);
+			z-index:1;
+		}
+		25%{
+			left:15px;
+			transform: scale(.7);
+			z-index:1;
+		}
+		49.9%{
+			z-index:1;
+		}
+		50%{
+			left:0;
+			transform: scale(1);
+			z-index:2;
+		}
+		99.9%{
+			z-index:2;
+		}
+		100%{
+			left:30px;
+			transform: scale(1);
+			z-index:1;
+		}
+	}
+}

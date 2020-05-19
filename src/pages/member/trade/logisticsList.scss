@@ -1,0 +1,227 @@
+@import '../../../scss/mixin.scss';
+
+[data-page~=LogisticsPageList] {
+    background-color: #f4f4f4;
+    padding-bottom: rem(20);
+    .clearfix:after {
+        content: "";
+        display: block;
+        height: 0;
+        clear: both;
+        visibility: hidden;
+        zoom: 1
+    }
+
+    //头部count
+    .count {
+        width: 100%;
+        height: rem(66);
+        line-height: rem(66);
+        background-color: #fff5db;
+        padding-left: rem(50);
+        font-size: rem(24);
+        color: #e4af53;
+        margin-bottom: rem(20)
+    }
+
+    //包裹部分
+    .eachPackage {
+        width: 94%;
+        margin: 0 auto;
+        background-color: #fff;
+        padding: 0 rem(20);
+        margin-top: rem(20);
+        // box-shadow: 0px 0px 1px #888888;
+        border: 1px solid #f4f4f4;
+        border-radius: 5px;
+    }
+
+    .packageTop {
+        height: rem(90);
+        border-bottom: 1px solid #e4e4e4;
+        line-height: rem(90);
+        position: relative;
+
+        .packageStatus {
+            color: #616ee6;
+            font-size: rem(26);
+            float: left;
+        }
+        .express_name{
+            float: right;
+        }
+        .express_no {
+            width: rem(200);
+            outline: none;
+            border: 0;
+            line-height: rem(80);
+            padding-top: rem(6);
+            font-size: rem(20);
+            color: #353535;
+            float: right;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+            margin-right: rem(40);
+        }
+
+        .express_no_copy {
+            position: absolute;
+            top: 50%;
+            right: 0;
+            margin-top: rem(-20);
+            float: right;
+            display: inline-block;
+            width: rem(40);
+            height: rem(40);
+            background-image: url('../../../img/logisticsList/express_no.png');
+            background-size: 100%;
+        }
+    }
+
+    .main,.erroeInfo{
+        display: block;
+        height: rem(60);
+        position: relative;
+        background: url('../../../img/logisticsList/car.png') no-repeat left center;
+        background-size: 7%;
+        padding-left: rem(56);
+        margin-top: rem(36);
+    }
+
+    .location {
+        font-size: rem(22);
+        color: #4a4a4a;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+    }
+    .time{
+        font-size: rem(16);
+        color: #999;
+    }
+    .banner{
+        margin: rem(30) 0;
+    }
+    .goods_img{
+        width: rem(180);
+        height:rem(180);
+        border-radius: 3px;
+        position: relative;
+        text-align: center;
+        .imgshow{
+            width: 85%;
+            height: 85%;
+        }
+        .goods_count{
+            position: absolute;
+            right: 0;
+            bottom: 0;
+            display: inline-block;
+            width: rem(50);
+            height: rem(30);
+            border-radius: 45%;
+            background-color: #ff8888;
+            font-size: rem(16);
+            color: #fff;
+            line-height: rem(30);
+            text-align: center;
+        }
+    }
+    //空白页
+    .empty{
+        padding: rem(550) 0 ;
+        width:96%;
+        margin: 0 auto;
+        background-color: #fff;
+        text-align: center;
+        color:#c9c9c9;
+        font-size: rem(22);
+    }
+    .bg{
+        width: rem(140);
+        height:rem(140);
+        margin: 0 auto;
+        margin-bottom: rem(40);
+        background-image: url('../../../img/logisticsList/trcNo.png');
+        background-repeat: no-repeat;
+        background-size: 100%;
+    }
+}
+
+[data-page~=logisticDetail] {
+    background-color: #f4f4f4;
+    .logisticInterInter,.logisticDomestic{
+        padding:rem(30) rem(56)
+    }
+    .sketch,.details{
+        width: 96%;
+        margin:0 auto;
+        background-color: #fff;
+        padding: rem(30);
+        color:#7b7b7b;
+        margin-bottom:rem(20);
+        .name{
+            margin-bottom: rem(30)
+        }
+        .copy{
+            border: 2px solid #f4f4f4;
+            padding: rem(8) rem(26);
+            // margin-left: rem(50)
+        }
+    }
+    .express_no{ 
+        border: 0;
+    }
+    .details{
+        padding: rem(60) rem(30);
+        .list{
+            padding-left: rem(30);
+            border-left: 1px solid #e4e4e4;
+        }
+        li{
+            position: relative;
+            margin-bottom: rem(60);
+            &:first-child{
+                span{
+                    background-color: #27a1e5;
+                    border: 3px solid #caf0ff
+                }
+            }
+            &:last-child{
+                margin-bottom: 0
+            }
+            &>span{
+                display: block;
+                width: rem(30);
+                height: rem(30);
+                background-color: #e4e4e4;
+                border-radius: 100%;
+                position: absolute;
+                left: rem(-46);
+                top: 0;
+                border: 3px solid #fff
+            }
+        }
+       
+    }
+    //空白页
+    .empty{
+        padding: rem(100) 0 ;
+        width:96%;
+        margin: 0 auto;
+        background-color: #fff;
+        text-align: center;
+        color:#c9c9c9;
+        font-size: rem(22);
+    }
+    .bg{
+        width: rem(140);
+        height:rem(140);
+        margin: 0 auto;
+        margin-bottom: rem(40);
+        background-image: url('../../../img/logisticsList/trcNo.png');
+        background-repeat: no-repeat;
+        background-size: 100%;
+    }
+}

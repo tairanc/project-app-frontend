@@ -1,0 +1,116 @@
+@import 'mixin.scss';
+
+[data-page~=recharge] {
+    .recharge-nav{
+        width: 100%;
+        height: 40px;
+        border-bottom: 1px solid #e4e4e4;
+        li{
+            width: 24%;
+            height: 40px;
+            line-height: 40px;
+            margin-left: 7%;
+            float: left;
+        }
+        .active{
+            border-bottom: 2px solid #0086d1;
+            color: #0086d1;
+        }
+    }
+    //控制
+    .control{
+        width: 100%;
+        li{
+            width: 100%;
+        }
+    }
+    //单个页面
+    .each-page{
+        width: 100%;
+    }
+    //手机号
+    .input-number{
+        width: 100%;
+        height: 76px;
+        border-bottom: 1px solid #e4e4e4;
+        padding: 10px 0 0 20px;
+        position: relative;
+        input{
+            width: 84%;
+            height: 36px;
+            font-size: 24px;
+            border: none;
+            display: block;
+        }
+        .error{
+            color: #f25a2b;
+            display: none;
+        }
+        .info{
+            color: #c9c9c9;
+            display: none;
+        }
+        img{
+            position: absolute;
+            right: 16px;
+            top: 24px;
+            width: 28px;
+            height: 28px;
+        }
+    }
+    //话费
+    .bill{
+        width: 100%;
+        padding: 0 7px 30px;
+        .each-bill{
+            width: 33.3%;
+            padding: 15px 8px 0;
+            .bill-box{
+                width: 100%;
+                height: 80px;
+                border: 1px solid #e4e4e4;
+                border-radius: 6px;
+                color: #353535;
+                padding-top: 12px;
+            }
+            .choose{
+                border: 1px solid #27a1e5;
+                p{
+                    color: #27a1e5;
+                }
+            }
+        }
+    }
+    //qb
+    .qb-qb{
+        width: 100%;
+        padding-left: 15px;
+        .qb-box{
+            height: 40px;
+            line-height: 40px;
+            text-align: center;
+            float: left;
+            width: 28%;
+            border-radius: 5px;
+            border: 1px solid #e4e4e4;
+            margin: 0 5% 15px 0;
+        }
+        .choose{
+            border: 1px solid #27a1e5;
+            color: #27a1e5;
+        }
+    }
+    //立即充值
+    .recharge-btn{
+        width: 96%;
+        margin-left: 2%;
+        height: 50px;
+        border-radius: 3px;
+        color: #fff;
+        background-color: #27a1e5;
+        font-size: 16px;
+    }
+    .disabled{
+        background-color: #e4e4e4;
+    }
+}

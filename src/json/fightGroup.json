@@ -1,0 +1,214 @@
+{
+  "allGroup":[
+    {
+      "odd":1,
+      "tid":"6542132654654",
+      "pic_path":"/src/img/temporary/trade_item_1.png",
+      "itemUrl":"/tradeList/0",
+      "title":"大噶的风all格的风格佛挡杀佛 水电费",
+      "spec_nature_info":"颜色：深蓝色、尺码fgdfg：m 数量: 1",
+      "status":"拼团中",
+      "item_num":1,
+      "payment":"¥123.00",
+      "ctrl":"1"
+    },
+    {
+      "odd":1,
+      "tid":"6542132654654",
+      "pic_path":"/src/img/temporary/trade_item_3.png",
+      "itemUrl":"http://www.baidu.com",
+      "title":"大噶的风all格的风格佛挡杀佛 水电费",
+      "spec_nature_info":"颜色：深蓝色、尺码：m 数量: 1",
+      "status":"拼团中",
+      "item_num":1,
+      "payment":"¥123.00"
+    },
+    {
+      "odd":1,
+      "tid":"6542132654654",
+      "pic_path":"/src/img/temporary/trade_item_1.png",
+      "itemUrl":"http://www.baidu.com",
+      "title":"大噶的风all格的风格佛挡杀佛 水电费",
+      "spec_nature_info":"颜色：深蓝色、尺码fgdfg：m 数量: 1",
+      "status":"拼团中",
+      "item_num":1,
+      "payment":"¥123.00",
+      "ctrl":"1"
+    },
+    {
+      "odd":1,
+      "tid":"6542132654654",
+      "pic_path":"/src/img/temporary/trade_item_3.png",
+      "itemUrl":"http://www.baidu.com",
+      "title":"大噶的风all格的风格佛挡杀佛 水电费",
+      "spec_nature_info":"颜色：深蓝色、尺码：m 数量: 1",
+      "status":"拼团中",
+      "item_num":1,
+      "payment":"¥123.00",
+      "ctrl":"1"
+    },
+    {
+      "odd":1,
+      "tid":"6542132654654",
+      "pic_path":"/src/img/temporary/trade_item_1.png",
+      "itemUrl":"http://www.baidu.com",
+      "title":"大噶的风all格的风格佛挡杀佛 水电费",
+      "spec_nature_info":"颜色：深蓝色、尺码fgdfg：m 数量: 1",
+      "status":"拼团成功",
+      "item_num":1,
+      "payment":"¥123.00"
+    },
+    {
+      "odd":1,
+      "tid":"6542132654654",
+      "pic_path":"/src/img/temporary/trade_item_3.png",
+      "itemUrl":"http://www.baidu.com",
+      "title":"大噶的风all格的风格佛挡杀佛 水电费",
+      "spec_nature_info":"颜色：深蓝色、尺码：m 数量: 1",
+      "status":"拼团失败",
+      "item_num":1,
+      "payment":"¥123.00",
+      "ctrl":"1"
+    },
+    {
+      "odd":1,
+      "tid":"6542132654654",
+      "pic_path":"/src/img/temporary/trade_item_1.png",
+      "itemUrl":"http://www.baidu.com",
+      "title":"大噶的风all格的风格佛挡杀佛 水电费",
+      "spec_nature_info":"颜色：深蓝色、尺码fgdfg：m 数量: 1",
+      "status":"拼团失败",
+      "item_num":1,
+      "payment":"¥123.00"
+    },
+    {
+      "odd":1,
+      "tid":"6542132654654",
+      "pic_path":"/src/img/temporary/trade_item_3.png",
+      "itemUrl":"http://www.baidu.com",
+      "title":"大噶的风all格的风格佛挡杀佛 水电费",
+      "spec_nature_info":"颜色：深蓝色、尺码：m 数量: 1",
+      "status":"拼团中",
+      "item_num":1,
+      "payment":"¥123.00"
+    },
+    {
+      "odd":1,
+      "tid":"6542132654654",
+      "pic_path":"/src/img/temporary/trade_item_1.png",
+      "itemUrl":"http://www.baidu.com",
+      "title":"大噶的风all格的风格佛挡杀佛 水电费",
+      "spec_nature_info":"颜色：深蓝色、尺码fgdfg：m 数量: 1",
+      "status":"拼团成功",
+      "item_num":1,
+      "payment":"¥123.00"
+    },
+    {
+      "odd":1,
+      "tid":"6542132654654",
+      "pic_path":"/src/img/temporary/trade_item_3.png",
+      "itemUrl":"http://www.baidu.com",
+      "title":"大噶的风all格的风格佛挡杀佛 水电费",
+      "spec_nature_info":"颜色：深蓝色、尺码：m 数量: 1",
+      "status":"拼团成功",
+      "item_num":1,
+      "payment":"¥123.00"
+    }
+  ],
+  "groupNow":[
+    {
+      "odd":1,
+      "tid":"6542132654654",
+      "pic_path":"/src/img/temporary/trade_item_1.png",
+      "itemUrl":"http://www.baidu.com",
+      "title":"大噶的风all格的风格佛挡杀佛 水电费",
+      "spec_nature_info":"颜色：深蓝色、尺码fgdfg：m 数量: 1",
+      "status":"拼团中",
+      "item_num":1,
+      "payment":"¥123.00",
+      "ctrl":"1"
+    },
+    {
+      "odd":1,
+      "tid":"6542132654654",
+      "pic_path":"/src/img/temporary/trade_item_3.png",
+      "itemUrl":"http://www.baidu.com",
+      "title":"大噶的风all格的风格佛挡杀佛 水电费",
+      "spec_nature_info":"颜色：深蓝色、尺码：m 数量: 1",
+      "status":"拼团中",
+      "item_num":1,
+      "payment":"¥123.00",
+      "ctrl":"1"
+    },
+    {
+      "odd":1,
+      "tid":"6542132654654",
+      "pic_path":"/src/img/temporary/trade_item_1.png",
+      "itemUrl":"http://www.baidu.com",
+      "title":"大噶的风all格的风格佛挡杀佛 水电费",
+      "spec_nature_info":"颜色：深蓝色、尺码fgdfg：m 数量: 1",
+      "status":"拼团成功",
+      "item_num":1,
+      "payment":"¥123.00"
+    },
+    {
+      "odd":1,
+      "tid":"6542132654654",
+      "pic_path":"/src/img/temporary/trade_item_3.png",
+      "itemUrl":"http://www.baidu.com",
+      "title":"大噶的风all格的风格佛挡杀佛 水电费",
+      "spec_nature_info":"颜色：深蓝色、尺码：m 数量: 1",
+      "status":"拼团失败",
+      "item_num":1,
+      "payment":"¥123.00",
+      "ctrl":"1"
+    },
+    {
+      "odd":1,
+      "tid":"6542132654654",
+      "pic_path":"/src/img/temporary/trade_item_1.png",
+      "itemUrl":"http://www.baidu.com",
+      "title":"大噶的风all格的风格佛挡杀佛 水电费",
+      "spec_nature_info":"颜色：深蓝色、尺码fgdfg：m 数量: 1",
+      "status":"拼团失败",
+      "item_num":1,
+      "payment":"¥123.00"
+    },
+    {
+      "odd":1,
+      "tid":"6542132654654",
+      "pic_path":"/src/img/temporary/trade_item_3.png",
+      "itemUrl":"http://www.baidu.com",
+      "title":"大噶的风all格的风格佛挡杀佛 水电费",
+      "spec_nature_info":"颜色：深蓝色、尺码：m 数量: 1",
+      "status":"拼团中",
+      "item_num":1,
+      "payment":"¥123.00"
+    }
+  ],
+  "groupSuccess":[
+    {
+      "odd":1,
+      "tid":"6542132654654",
+      "pic_path":"/src/img/temporary/trade_item_1.png",
+      "itemUrl":"http://www.baidu.com",
+      "title":"大噶的风all格的风格佛挡杀佛 水电费",
+      "spec_nature_info":"颜色：深蓝色、尺码fgdfg：m 数量: 1",
+      "status":"拼团成功",
+      "item_num":1,
+      "payment":"¥123.00"
+    },
+    {
+      "odd":1,
+      "tid":"6542132654654",
+      "pic_path":"/src/img/temporary/trade_item_3.png",
+      "itemUrl":"http://www.baidu.com",
+      "title":"大噶的风all格的风格佛挡杀佛 水电费",
+      "spec_nature_info":"颜色：深蓝色、尺码：m 数量: 1",
+      "status":"拼团成功",
+      "item_num":1,
+      "payment":"¥123.00"
+    }
+  ],
+  "groupFail":""
+}

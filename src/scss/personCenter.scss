@@ -1,0 +1,167 @@
+@import "mixin.scss";
+/*
+*个人中心
+*/
+[data-page~=person-center]{
+	@include customIcon(menu,"menu",15px,20px);
+	@include customIcon(arrow-right,"arrow/arrow-right",10px,15px);
+	#personCenter{
+		background:#f4f4f4;
+		padding-bottom:20px;
+	}
+	//头部
+	.person-center-header{
+		width:100%;
+		height:rem(338);
+		position:relative;
+		background:url(../img/personCenter/person-center-bg.gif) center no-repeat transparent;
+		background-size:cover;
+		.user-header{
+			display:block;
+			padding-top:rem(80);
+			.header-img{
+				margin:0 auto rem(16);
+				overflow:hidden;
+				width:rem(124);
+				height:rem(124);
+				border:2px solid #fff;
+				border-radius:50%;
+				background-size:cover;
+				img{
+					width:100%;
+					height:100%;
+					border-radius:50%;
+				}
+			}
+		}
+		.setting-btn{
+			position:absolute;
+			width:25px;
+			height:25px;
+			right:rem(26);
+			top:rem(16);
+			background:url(../img/icon/setting-icon.png) center no-repeat transparent;
+			background-size:cover;
+		}
+	}
+	//我的订单
+	.user-order{
+		padding:12px 4%;
+		background:#fff;
+		line-height:30px;
+		display:block;
+		font-size:14px;
+		margin-bottom:1px;
+		position:relative;
+		/*&:focus{
+			-webkit-tap-highlight-color: #a1a1a1;
+		}*/
+		.c-fl{
+			color:#353535;
+			.menu-icon{
+				vertical-align:-5px;
+				margin-right:5px;
+			}
+		}
+		.c-fr{
+			color:#808080;
+			.arrow-right-icon{
+				margin-left:5px;
+				vertical-align:-2px;
+			}
+		}
+		.login-mask{
+			position:absolute;
+			width:100%;
+			height:100%;
+			left:0;
+			top:0;
+			z-index:1;
+		}
+	}
+	//订单状态
+	.order-status-list{
+		background:#fff;
+		padding:10px 0 15px 0;
+		@include flexBox;
+		.order-icon{
+			display:block;
+			-webkit-box-flex: 1;
+			-webkit-flex: 1;
+			-ms-flex: 1;
+			flex: 1;
+			& > a{
+				display:block;
+				//background:#0b97c4;
+			}
+			.icon-img{
+				display:inline-block;
+				width:28px;
+				height:25px;
+				position:relative;
+			}
+			span{
+				display:block;
+			}
+			$order-status:status-wait-pay,status-wait-send,status-wait-receive,status-wait-evaluate,after-sale;
+			@each $status in $order-status{
+				.#{$status}-icon{
+					background:url(../img/icon/#{$status}-icon.png) center no-repeat transparent;
+					background-size:25px;
+				}
+			}
+			.order-status-number{
+				position:absolute;
+				border:1px solid #ff5555;
+				top:-4px;
+				left:16px;
+				font-size:10px;
+				height:16px;
+				min-width:16px;
+				border-radius:8px;
+				line-height:16px;
+				background:#fff;
+				text-align:center;
+				padding:0 3px;
+			}
+		}
+	}
+	//九宫格
+	.nine-grid-view{
+		margin-top:10px;
+		background:#fff;
+		& > a{
+			display:block;
+			padding:5px 0;
+			text-align:center;
+			float:left;
+			width:33.3%;
+			border-right:1px solid #e4e4e4;
+			&:nth-child(3n){
+				border-right:0;
+			}
+			&:nth-child(n+4){
+				border-top:1px solid #e4e4e4;
+			}
+			img{
+				width:90px;
+				height:45px;
+			}
+			span, i{
+				display:block;
+			}
+			span{
+				font-size:14px;
+				color:#353535;
+				line-height:16px;
+			}
+			i{
+				font-size:10px;
+				color:#c9c9c9;
+				line-height:15px;
+				height:15px;
+			}
+
+		}
+	}
+}

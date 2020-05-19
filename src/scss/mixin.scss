@@ -1,0 +1,103 @@
+@function rem( $px ){
+	$rate : 75;
+	@return $px/$rate + rem;
+}
+//flex盒子
+@mixin flexBox{
+	display:-webkit-box;
+	display:-webkit-flex;
+	display:-ms-flexbox;
+	display:flex;
+}
+//flex盒子子元素垂直居中
+@mixin flexVtc{
+	-webkit-box-align: center;
+	-ms-flex-align: center;
+	-webkit-align-items:center;
+	align-items: center;
+}
+//flex盒子子元素水平
+@mixin flexHori{
+	-webkit-box-pack: center;
+	-ms-flex-pack: center;
+	-webkit-justify-content:center;
+	justify-content:center;
+}
+//flex盒子子元素水平环绕
+@mixin flexAround{
+    -webkit-box-pack: space-around;
+    -ms-flex-pack: space-around;
+    -webkit-justify-content: space-around;
+    justify-content: space-around;
+}
+//flex盒子子元素水平居左
+@mixin flexHoriLf{
+    -webkit-box-pack: flex-start;
+    -ms-flex-pack: flex-start;
+    -webkit-justify-content:flex-start;
+    justify-content:flex-start;
+}
+
+//flex子元素
+@mixin flex($n){
+	display:block;
+	-webkit-box-flex:$n;
+	-webkit-flex:$n;
+	-ms-flex:$n;
+	flex:$n;
+}
+
+//旋转45度
+@mixin transform45{
+    transform:rotate(45deg);
+    -ms-transform:rotate(45deg);
+    -moz-transform:rotate(45deg);
+    -webkit-transform:rotate(45deg);
+    -o-transform:rotate(45deg);
+}
+
+//宽度自适应
+@mixin shrink{
+    flex-shrink:1;
+    -ms-flex-shrink:1;
+    -moz-flex-shrink:1;
+    -webkit-flex-shrink:1;
+    -o-flex-shrink:1;
+}
+
+//多行省略
+@mixin multiLine($n){
+	display:-webkit-box;
+	word-break: break-all;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	-webkit-line-clamp:$n;
+	/* autoprefixer: off */
+	-webkit-box-orient:vertical;
+	/* autoprefixer: on */
+}
+//定死一行高，超出隐藏
+@mixin hOfHd($px){
+	height:$px;
+	line-height:$px;
+	overflow:hidden;
+}
+//自定义小图标
+@mixin customIcon($type,$url,$width,$height){
+	i.#{$type}-icon{
+		display:inline-block;
+		width:$width;
+		height:$height;
+		background:url(/src/img/icon/#{$url}-icon.png) center no-repeat transparent;
+		background-size:$width $height;
+	}
+}
+
+//自定义小图标
+@mixin cusIcon($url,$width,$height){
+	display:inline-block;
+	width:$width;
+	height:$height;
+	background:url(/src/img/#{$url}) center no-repeat transparent;
+	background-size:$width $height;
+}

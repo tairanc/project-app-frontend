@@ -1,0 +1,69 @@
+@import 'mixin.scss';
+
+[data-page~=page-guid] {
+  html {
+    font-size: 100%;
+    -webkit-text-size-adjust: 100%;
+    -ms-text-size-adjust: 100%;
+  }
+  .appGuide_body {
+    padding: 0;
+    margin: 0;
+    background-color: #e9e9e9;
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    width: 100%;
+    .trc-log{
+      position: absolute;
+      top:0;
+    }
+    img{
+      display: block;
+    }
+  }
+  .appGuide_main {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+  }
+  .weixin-download-mask {
+    display: none;
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    z-index: 999;
+   // background-image: url('../images/zhezhao.png');
+    background-size: 100% auto;
+    background-position: 0 0;
+    background-repeat: no-repeat;
+  }
+  .appGuide_content {
+    position: absolute;
+    width: 100%;
+    bottom: 0.22rem;
+    overflow: hidden
+  }
+  .app_download_btn {
+    margin-bottom: rem(130);
+    text-align: center;
+    a{
+      display: inline-block;
+      text-align: center;
+    }
+    img {
+      width: rem(436);
+    }
+  }
+  .copyright {
+    font-size: 0.12rem;
+    text-align: center;
+    line-height: 2em;
+    font-family: Arial, 'Microsoft YaHei', sans-serif;
+    color: #afafaf;
+  }
+}

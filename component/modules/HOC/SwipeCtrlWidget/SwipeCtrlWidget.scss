@@ -1,0 +1,39 @@
+@import "../../../mixin.scss";
+
+:local{
+	.swiperWrap{
+		overflow: hidden;
+		width:100%;
+	}
+	.swipeBox{
+		@include flexBox();
+	}
+	.swipeMain{
+		@include flex(1);
+	}
+	.ctrlBtn{
+		height:100%;
+		@include flexBox();
+		color:#fff;
+		font-size:13px;
+		text-align:center;
+	}
+	.collect{
+		background:#fbb810;
+		@include flex(1);
+		@include flexBox();
+		@include flexVtc();
+	}
+	.textWrap{
+		width:100%;
+	}
+	.delete{
+		background:#e83a3a;
+		@include flex(1);
+		@include flexBox();
+		@include flexVtc();
+		p{
+			width:100%;
+		}
+	}
+}

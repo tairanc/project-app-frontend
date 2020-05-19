@@ -1,0 +1,39 @@
+@import  '../../../scss/mixin.scss';
+
+[data-page~=store-detail]{
+    .licenseTitle{
+        height: rem(90);
+        text-align: center;
+        font-size: rem(36);
+        line-height: rem(90);
+        border-bottom: 1px solid #f0f0f0;
+    }
+    .licenseDesc{
+        padding: 0 rem(30) rem(20) rem(36);
+        h1{
+            padding: rem(36) 0 rem(30) 0;
+            font-size: rem(30);
+            text-align: center;
+            vertical-align: middle;
+        }
+        p{
+            font-size: rem(24);
+            color: #666;
+            line-height: rem(34);
+        }
+    }
+    .licenseImage{
+        margin: 0 auto;
+        width: rem(576);
+        img{
+            width: 100%;
+        }
+    }
+    .licenseImageDesc{
+        padding-top: rem(20);
+        padding-bottom: rem(64);
+        text-align: center;
+        font-size: rem(24);
+        color: #999;
+    }
+}

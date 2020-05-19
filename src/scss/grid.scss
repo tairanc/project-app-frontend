@@ -1,0 +1,32 @@
+//g-  grid布局样式
+
+@import 'mixin.scss';
+.g-col-1{  @include flex(1);  }
+.g-col-2{  @include flex(2);  }
+.g-col-3{  @include flex(3);  }
+.g-col-4{  @include flex(4);  }
+.g-col-5{  @include flex(5);  }
+.g-col-6{  @include flex(6);  }
+.g-col-7{  @include flex(7);  }
+.g-col-8{  @include flex(8);  }
+.g-col-9{  @include flex(9);  }
+.g-col-10{  @include flex(10);  }
+.g-col-11{  @include flex(11);  }
+.g-col-12{  @include flex(12);  }
+.g-row-flex{
+	@include flexBox();
+	&:before,&:after{
+		content:"";
+		display:table;
+		clear:both;
+	}
+	width:100%;
+}
+.g-row-ctr{
+	@include  flexHori();
+}
+.g-col-mid{
+	@include flexVtc();
+}
+
+

@@ -1,0 +1,46 @@
+@import "mixin.scss";
+[data-page=agreement]{
+	//服务协议
+	&.agreement{
+		position:fixed;
+		left:0;
+		top:0;
+		background:#fff;
+		z-index:110;
+		overflow:scroll;
+		height:100%;
+		line-height: 0.65rem;
+		padding: 10px;
+	}
+	//服务协议
+	&.service-agreement{
+		position:fixed;
+		left:0;
+		top:0;
+		background:#fff;
+		z-index:30;
+		overflow:scroll;
+		height:100%;
+	}
+	//进口委托
+	&.import-commission{
+		position:fixed;
+		left:0;
+		top:0;
+		background:#fff;
+		z-index:30;
+		overflow:scroll;
+		height:100%;
+	}
+	//标题css
+	.tc{
+		text-align: center;
+	}
+	//段落css
+	.ti{
+		text-indent:26px;
+	}
+	.tp{
+		padding-left: 26px;
+	}
+}

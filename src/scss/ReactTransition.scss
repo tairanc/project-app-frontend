@@ -1,0 +1,41 @@
+/*
+*组件动画模块css
+*/
+[data-comp~=animate]{
+	//弹窗淡入淡出
+	.modal-enter{
+		opacity:0;
+		transform: translate3d(0,-200%,0);
+		&.modal-enter-active {
+			opacity: 1;
+			transition: opacity 200ms ease-in,transform 200ms ease-out;
+			transform: translate3d(0,0,0);
+		}
+	}
+	.modal-leave{
+		opacity: 1;
+		transform: translate3d(0,0,0);
+		&.modal-leave-active {
+			opacity: 0;
+			transition: opacity  200ms ease-out,transform 200ms ease-in;
+			transform: translate3d(0,-200%,0);
+		}
+	}
+
+	//提示框淡出
+	.prompt-enter{
+		opacity:0 !important;
+		background:#0086d1;
+		&.prompt-enter-active{
+			opacity:0.8 !important;
+			transition:all 100ms ease-in;
+		}
+	}
+	.prompt-leave{
+		opacity:0.8 !important;
+		&.prompt-leave-active{
+			transition:all 200ms ease-out;
+			opacity:0 !important;
+		}
+	}
+}

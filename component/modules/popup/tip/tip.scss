@@ -1,0 +1,25 @@
+:local{
+	.tip{
+		position:fixed;
+		z-index:110;
+		top:50%;
+		transform: translate3d(0,-50%,0);
+		text-align:center;
+		width:100%;
+	}
+	.tip-text{
+		display:inline-block;
+		background:#000;
+		line-height:18px;
+		padding:6px 15px;
+		font-size:14px;
+		color:#fff;
+		border-radius:15px;
+		opacity:0;
+		transition:all 500ms ease-out;
+		&.active{
+			opacity:0.8;
+			transition:all 200ms ease-in;
+		}
+	}
+}

@@ -1,0 +1,58 @@
+@import "../../../mixin.scss";
+
+:local{
+	.modal{
+		z-index:102;
+		border-radius:7px;
+		overflow:hidden;
+		width:86%;
+		//height:108px;
+		margin:0 7%;
+		background:#fff;
+		position:fixed;
+		top:50%;
+		padding:0 6%;
+		text-align:center;
+		font-size:14px;
+		opacity:0;
+		transform: translate3d(0,-100%,0);
+		transition: all 200ms ease-in;
+		&.active{
+			opacity: 1;
+			transition: all 200ms ease-in;
+			transform: translate3d(0,-50%,0);
+		}
+		.modalText{
+			height:64px;
+			line-height:64px;
+			@include multiLine(1);
+			border-bottom:1px solid #e4e4e4;
+			display:table;
+			width:100%;
+			span{
+				display:table-cell;
+				vertical-align:middle;
+				line-height:20px;
+			}
+		}
+		.modalBtn{
+			@include flexBox;
+			justify-items: center;
+			& > div{
+				@include flex(1);
+				color:#27a1e5;
+				line-height:20px;
+				font-size:14px;
+				padding:12px 0;
+				span{
+					display:block;
+					width:100%;
+				}
+				&:first-child span{
+					border-right:1px solid #e4e4e4;
+				}
+			}
+		}
+	}
+}
+

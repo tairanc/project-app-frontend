@@ -1,0 +1,25 @@
+@import '../../../scss/mixin.scss';
+//身份证照片示例
+[data-page~=identity-example]{
+  #identity-example {
+    //background-color: #f4f4f4;
+    overflow: hidden;
+    .correctEx{
+      margin-top:rem(40);
+      h1{text-align: center;font-size:rem(32);font-weight: bold;}
+      h3{text-align: center;margin-top:rem(28);font-size:rem(28);}
+      p{text-align: center;
+        img{margin-left:5%;width:80%;}
+      }
+    }
+    .errorEx{
+      margin-top:rem(40);
+      h1{text-align: center;font-size:rem(32);font-weight: bold;}
+      h3{width:80%;padding-left:rem(28);margin-top:rem(20);font-size:rem(28);}
+      p{text-align: center;
+        img{margin-left:5%;width:80%;}
+      }
+    }
+  }
+
+}

@@ -1,0 +1,71 @@
+:local {
+  .shady {
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    background-color: #000000;
+    z-index: 99;
+    opacity: 0.5;
+    top: 0;
+    left: 0;
+  }
+  .animationModal {
+    position: fixed;
+    width: 100%;
+    background-color: #FFFFFF;
+    bottom: -15px;
+    left: 0;
+    z-index: 100;
+    transform: translate3d(0,100%,0);
+    transition:all 0.2s ease-in;
+    &.active{
+      transition:all 0.2s ease-out;
+      transform: translate3d(0,-15px,0);
+    }
+    .title {
+      color: #353535;
+      font-size: 16px;
+      text-align: center;
+      width: 100%;
+      display: inline-block;
+      height: 65px;
+      line-height: 65px;
+    }
+    .closeBtn i {
+      position: absolute;
+      top: 15px;
+      right: 15px;
+      display: block;
+      width: 18px;
+      height: 18px;
+      z-index: 100;
+      background: url(../../../src/img/icon/close/close-nobg-icon.png) center center no-repeat;
+    }
+  }
+
+
+  /*.animation1 {
+    animation: \animation1 0.3s linear forwards;
+  }
+  .animation2 {
+    animation: \animation2 0.3s linear forwards;
+  }
+  @keyframes animation1 {
+    0% {
+      bottom: -450px;
+    }
+    100% {
+      bottom: 0;
+    }
+  }
+
+  @keyframes animation2 {
+    0% {
+      bottom: 0;
+    }
+    100% {
+      bottom: -450px;
+    }
+  }*/
+
+}

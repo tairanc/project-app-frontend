@@ -1,0 +1,219 @@
+﻿{
+  "nologin": 1,
+  "user_id": 2405,
+  "dlytmplInfo": {
+    "is_free": "0",
+    "depart_add": "",
+    "store_id": 0
+  },
+
+  "item": {
+    "desc": {
+      "handset": "sdfsdsdsdfsdfdsd"
+    },
+    "item_id": 51,
+    "status": "Shelves",
+    "snapshot_id": 0,
+    "shop_id": 2,
+    "category_id": 13,
+    "brand_id": 1,
+    "self_support": true,
+    "title": " 母婴 澳洲贝拉米（Bellamys）婴幼儿有机奶粉2段（6至12个月）",
+    "sub_title": "",
+    "art_no": "123123",
+    "barcode": "",
+    "sell_price": 98.00,
+    "market_price": 120.00,
+    "weight": 0,
+    "storehouse_id": 3,
+    "type": "Normal",
+    "trade_type": "Bonded",
+    "deduct_store_type": "Order",
+    "primary_image": "https://image.tairanmall.com/5b/3a/de/a8892c5e3c728f8d057ab9dd98bdf4e822ff5a78.jpg_l.jpg",
+    "sell_platform": [
+      "Desktop",
+      "Handset"
+    ],
+    "category": {
+      "primary": {
+        "category_id": 1,
+        "name": "this is a 1"
+      },
+      "secondary": {
+        "category_id": 5,
+        "name": "this is a 2"
+      },
+      "tertiary": {
+        "category_id": 13,
+        "name": "三级 1"
+      }
+    },
+    "brand": {
+      "brand_id": 1,
+      "name": "Iphone",
+      "alias": "Iphone",
+      "logo": "/images/88/47/d2/cc66c7912576a90a7b561829459570b510487246.jpg"
+    },
+
+    "images": [
+      "https://image.tairanmall.com/5b/3a/de/a8892c5e3c728f8d057ab9dd98bdf4e822ff5a78.jpg_l.jpg",
+      "https://image.tairanmall.com/22/22/a2/e9abb77cc27fb3ce89d77626ba04fcde7c0b4031.jpg_l.jpg",
+      "https://image.tairanmall.com/2d/82/3e/89cadb603c28d6b85fcd4bb7906b9666a110bcee.jpg_l.jpg"
+
+    ],
+    "tags": [
+    ],
+    "delivery_template_id": 2,
+    "delivery_regions": true,
+    "skus": {
+      "132": {
+        "sku_id": 132,
+        "spec_values": {
+          "9": 25
+        },
+        "text": "颜色: ",
+        "art_no": "",
+        "barcode": "1",
+        "sell_price": 1,
+        "market_price": 0,
+        "weight": 1,
+        "primary_image": "",
+        "marks": [
+        ],
+        "store": {
+          "total": 2,
+          "freeze": 0,
+          "activity": 0,
+          "real": 20,
+          "update_time": 1487054292
+        },
+        "create_time": 1487054292,
+        "modify_time": 1487054292
+      },
+      "133": {
+        "sku_id": 133,
+        "spec_values": {
+          "9": 26
+        },
+        "text": "颜色: ",
+        "art_no": "",
+        "barcode": "1",
+        "sell_price": 1,
+        "market_price": 0,
+        "weight": 1,
+        "primary_image": "",
+        "marks": [
+        ],
+        "store": {
+          "total": 20,
+          "freeze": 0,
+          "activity": 0,
+          "real": 20,
+          "update_time": 1487054292
+        },
+        "create_time": 1487054292,
+        "modify_time": 1487054292
+      }
+    },
+    "specs": {
+      "9": {
+        "spec_id": 9,
+        "name": "颜色",
+        "show_type": "Text",
+        "values": {
+          "25": {
+
+            "spec_value_id": 25,
+              "text": 4545}
+          ,
+          "26":
+            {"spec_value_id": 26,
+              "text": 45}
+
+        }
+      }
+    },
+    "properties": [
+    ],
+    "marks": [
+    ],
+    "promotions": [
+    ],
+    "store": {
+      "total": 2,
+      "freeze": 0,
+      "activity": 0,
+      "real": 40,
+      "update_time": 1487054291
+    },
+    "tax": {
+      "tax_rule_id": 1,
+      "tax_rate": 11.9
+    },
+    "create_time": 1487054291,
+    "modify_time": 1487054291,
+    "delete_time": 0,
+    "shelves_time": 0,
+    "stock_time": 0,
+    "valid": true,
+    "realStore": "40",
+    "spec": {
+      "specSku": {
+        "25": {
+          "sku_id": 132,
+          "item_id": 51,
+          "price": 1,
+          "store": 20,
+          "invest_money": 0,
+          "expect_profit": 0,
+          "link_pc": null,
+          "link_h5": null,
+          "installment_strategy": null,
+          "valid": true
+        },
+        "26": {
+          "sku_id": 133,
+          "item_id": 51,
+          "price": 1,
+          "store": 20,
+          "invest_money": 0,
+          "expect_profit": 0,
+          "link_pc": null,
+          "link_h5": null,
+          "installment_strategy": null,
+          "valid": true
+        }
+      },
+      "specName": {
+        "": ""
+      }
+    },
+    "price": "123123.00"
+  },
+  "breadcrumb": [
+    {
+      "url": "",
+      "title": "this is a 1"
+    },
+    {
+      "url": "",
+      "title": "this is a 2"
+    },
+    {
+      "url": "",
+      "title": "三级 1"
+    },
+    {
+      "url": "",
+      "title": null
+    },
+    {
+      "url": "",
+      "title": "11111"
+    }
+  ],
+  "image_default_id": "",
+  "is_charge": 0,
+  "distributable": "1",
+  "default_city": "杭州市滨江区"
+}

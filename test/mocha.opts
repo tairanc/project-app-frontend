@@ -1,0 +1,3 @@
+--reporter tap
+--recursive
+-t 10000

@@ -1,0 +1,161 @@
+@import "../../scss/mixin.scss";
+
+
+:local{
+	.itemSwipe{
+		padding:13px 0 5px;
+    // background:#fff;
+    background-color: hsla(29,82%,89%,.3);
+	}
+	.header{
+		height:24px;
+		overflow: hidden;
+		padding:0 15px;
+		@include flexBox();
+		@include flexVtc();
+	}
+	.hText{
+		font-size:14px;
+		@include flex(1);
+	}
+	
+	.hCtrl{
+		color:#f55;
+		font-size:13px;
+	}
+	
+	
+	.swipeWrapper{
+		overflow: hidden;
+	}
+	.swipeBox{
+		width:100%;
+		overflow-x: scroll;
+		&::-webkit-scrollbar{
+			display:none;
+		}
+	}
+	.swipeContent{
+		@include flexBox();
+		padding: 0 3px;
+	}
+	
+	//一个商品
+	// .item{
+	// 	position: relative;
+	// 	display:block;
+	// 	width:134px;
+	// 	padding:12px 0;
+	// 	img{
+	// 		width:100%;
+	// 		padding:0 12px;
+	// 		height:110px;
+	// 	}
+	// }
+	.good-top-tag{
+		position: absolute;
+		top: rem(24);
+		left: rem(24);
+		img{
+			width: rem(80);
+			height: auto;
+			padding: 0;
+		}
+	}
+	// .title{
+	// 	height:32px;
+	// 	line-height:16px;
+	// 	@include multiLine(2);
+	// 	padding:0 12px;
+	// 	font-size:11px;
+	// 	margin: 5px 0 4px;
+	// }
+	// .price{
+	// 	text-align:center;
+	// 	color:#e60a30;
+	// 	font-size:13px;
+	// }
+	.label{
+		display:inline-block;
+		border:1px solid #e60a30;
+		font-size:10px;
+		padding:0 3px;
+		line-height:16px;
+		border-radius:3px;
+		margin-left:3px;
+  }
+  
+ .item {
+  position: relative;
+  display: inline-block;
+  text-align: center;
+  width: 100px;
+  margin: 0 10px;
+  .swipe-content{
+    display:-webkit-box;
+    display:-ms-flexbox;
+    display:flex;
+    padding: 0 3px;
+    // background-color: hsla(29,82%,89%,.3);
+    .more-box{
+      padding: 16px 8px 0 10px;
+      .more-img {
+        width: 82px;
+        height: 80px;
+        background-color: #FCF3E3;
+      
+      }
+      .more-text {
+        margin: 7px auto 0;
+        height: 21px;
+        line-height: 21px;
+        width: 60px;
+        text-align: center;
+        color: #999999;
+        font-size: 11px;
+        border-radius: 11px;
+        border: 1px solid rgba(153,153,153,0.5);
+      }
+    }
+    .def-data{
+      overflow: hidden;
+      .img{
+        width: 100px;
+        height: 100px;
+      }
+      .title{
+        height: 16px;
+        line-height: 16px;
+        font-size: 12px;
+        overflow: hidden;
+        text-overflow:ellipsis;
+        white-space: nowrap;
+        margin: rem(6) auto;
+      }
+      .price{
+        text-align:center;
+        color: #D81317;
+        height: 15px;
+        line-height: 15px;
+        font-size: 13px;
+        margin-bottom: rem(11);
+      }
+      .discount{
+        display: inline-block;
+        height: 18px;
+        padding: 0 5px;
+        line-height: 18px;
+        text-align: center;
+        background-color: #353535;
+        color: #F9F2EB;
+        font-size: 10px;
+        border-radius: 9px;
+      }
+    }
+  }
+  
+ }
+	
+}
+
+

@@ -1,0 +1,617 @@
+@import 'mixin.scss';
+
+[data-page~=evaluate-list] {
+  //评价列表
+  #evaluate-list {
+    .large-img{
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: #000;
+        z-index: 20;
+        img{
+            position: absolute;
+            width: 100%;
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            margin: auto;
+        }
+        .swiper-pagination-bullet{
+            background-color: #fff;
+        }
+    }
+    .item-msg {
+      width: 100%;
+      height: 55px;
+      padding: 10px;
+      border-bottom: 1px solid #e4e4e4;
+      position: fixed;
+      top: 0;
+      left: 0;
+      background-color: #f4f4f4;
+      z-index: 2;
+      .item-img {
+        width: 35px;
+        height: 35px;
+        position: absolute;
+        left: 10px;
+        top: 10px;
+        border-radius: 2px;
+      }
+      .item-title {
+        display: block;
+        width: 100%;
+        padding: 0 60px 0 45px;
+        @include multiLine(2);
+      }
+      .item-price {
+        display: block;
+        width: 50px;
+        height: 35px;
+        text-align: center;
+        line-height: 35px;
+        font-weight: 900;
+        position: absolute;
+        right: 24px;
+        top: 10px;
+      }
+    }
+
+    //评价整体
+    .item-evaluate {
+      position: absolute;
+      top: 55px;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+    }
+
+    //无评价
+    .none-img {
+      width: 164px;
+      height: 120px;
+      position: absolute;
+      top: 158px;
+      left: 50%;
+      margin-left: -82px;
+    }
+
+    //评价header
+    .list-header {
+      min-height: 123px;
+      width: 100%;
+      border-bottom: 1px solid #e4e4e4;
+      padding: 0 10px;
+      //星级
+      .stars {
+        width: 100%;
+        height: 50px;
+        line-height: 50px;
+        position: relative;
+        .stars-img {
+          width: 87px;
+          height: 14px;
+          background-image: url("../img/evaluate/stars-bg.png");
+          background-repeat: no-repeat;
+        }
+      }
+      //标签
+      .labels-outter {
+        width: 100%;
+        height: auto;
+        .labels-inner {
+          width: 100%;
+          height: 70px;
+          overflow: hidden;
+        }
+        .labels-inner-open {
+          width: 100%;
+          height: auto;
+        }
+        .list-labels {
+          width: 100%;
+          height: auto;
+          .list-label {
+            height: 25px;
+            border-radius: 4px;
+            padding: 0 9px;
+            margin-bottom: 10px;
+            margin-right: 8px;
+            color: #353535;
+            background-color: #fff2f5;
+          }
+          .active-label{
+            background:#ff8888;
+            color:#fff
+          }
+        }
+
+      }
+      //展开
+      .open-labels {
+        width: 100%;
+        height: 24px;
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: 17px 9px;
+      }
+      .to-open {
+        background-image: url("../img/icon/arrow/arrow-btm-icon.png");
+      }
+      .to-close {
+        background-image: url("../img/icon/arrow/arrow-top-m-icon.png");
+      }
+    }
+
+    //评价列表
+    .list {
+      color: #353535;
+    }
+
+    //单个评价
+    .one-evaluate {
+      width: 100%;
+      height: auto;
+      border-bottom: 1px solid #e4e4e4;
+      padding: 11px 10px 0;
+      &:nth-last-child(1) {
+        border-bottom: none;
+      }
+      margin-bottom: 10px;
+      position: relative;
+      //精华评价
+        .amazing{
+            width: 70px;
+            height: 55px;
+            position: absolute;
+            top: 14px;
+            right: 9px;
+        }
+
+      //点赞
+      .thumbs-up {
+        width: 100%;
+        height: 32px;
+        .zan {
+          width: 55px;
+          height: 18px;
+          line-height: 18px;
+          border-radius: 9px;
+          margin-left: 15px;
+          font-size: 10px;
+          padding-left: 14px;
+          background-size: 14px 14px;
+          background-repeat: no-repeat;
+          background-position: 6px center;
+        }
+        .zan-already {
+          color: #e60a30;
+          border: 1px solid #e60a30;
+          background-image: url("../img/evaluate/zan-already.png");
+        }
+        .zan-yet {
+          color: #666;
+          border: 1px solid #666;
+          background-image: url("../img/evaluate/zan-yet.png");
+        }
+      }
+
+      //用户信息
+      .user-msg {
+        width: 100%;
+        height: 30px;
+        display: flex;
+        @include flexVtc;
+        .user-photo {
+          width: 30px;
+          height: 30px;
+          border-radius: 15px;
+          overflow: hidden;
+          margin-right: 5px;
+          img {
+            width: 30px;
+            height: 30px;
+          }
+        }
+
+      }
+      //商品参数
+      .date-type {
+        color: #999;
+        min-height: 40px;
+        width: 100%;
+        padding: 6px 0 6px;
+        span {
+          margin-right: 10px;
+        }
+      }
+    }
+
+    //评价内容
+    .content-txt {
+      width: 100%;
+      height: auto;
+      //评价图片
+      .content-imgs {
+        width: 100%;
+        height: 135px;
+        overflow: hidden;
+        .img-outter {
+          width: 145px;
+        }
+        .content-img {
+         /* width: 135px;
+          height: 135px;*/
+          margin-right: 10px;
+          width: 135px;
+          height: 135px;
+          overflow:hidden;
+          img {
+           /* width: 135px;
+            height: auto;*/
+            margin:0;
+            padding:0;
+            width:100%;
+            height: 100%;
+            object-fit: cover;//重要
+          }
+        }
+      }
+    }
+
+    //客服回复
+    .content-reply {
+      width: 100%;
+      height: auto;
+      color: #666;
+      background-color: #f4f4f4;
+      padding: 0 10px;
+    }
+  }
+
+  //评价成功
+  #evaluate-success {
+    //成功提示
+    .suc-inform {
+      width: 100%;
+      height: 230px;
+      position: relative;
+      padding-top: 100px;
+      img {
+        width: 56px;
+        height: 56px;
+        position: absolute;
+        top: 23px;
+        left: 50%;
+        margin-left: -28px;
+      }
+      h2 {
+        font-weight: 900;
+      }
+      button {
+        width: 96%;
+        height: 45px;
+        border: none;
+        margin-left: 2%;
+        font-weight: 900;
+        font-family: SourceHanSansCN;
+      }
+    }
+    //更多推荐
+    .more-recommend {
+      width: 100%;
+      height: 40px;
+      position: relative;
+      background-color: #f4f4f4;
+      padding: 0 14px 0;
+      .line {
+        width: 100%;
+        height: 19px;
+        border-bottom: 1px solid #e4e4e4;
+      }
+      .line-txt {
+        width: 94px;
+        background-color: #f4f4f4;
+        height: 40px;
+        line-height: 40px;
+        position: absolute;
+        top: 0;
+        left: 50%;
+        margin-left: -47px;
+      }
+    }
+    //推荐的商品
+    .more-goods {
+      width: 100%;
+      height: 380px;
+      overflow: hidden;
+      padding: 19px 2% 0;
+      .each-goods {
+        width: 33.3%;
+        float: left;
+        text-align: center;
+        height: 182px;
+        position: relative;
+        .goods-position {
+          max-width: 105px;
+          width: 96%;
+          position: absolute;
+          top: 0;
+          left: 50%;
+          margin-left: -52.5px;
+        }
+        .goods-img {
+          display: block;
+          width: 100%;
+          height: 105px;
+          text-align: center;
+          overflow: hidden;
+          img {
+            width: 100%;
+          }
+        }
+        .goods-title {
+          width: 100%;
+          height: 37px;
+          border-bottom: 1px dotted #e4e4e4;
+          @include multiLine(2);
+        }
+      }
+
+    }
+
+    //查看更多
+    .find-more {
+      width: 100%;
+      height: 84px;
+      position: relative;
+      .to-more {
+        width: 80px;
+        height: 30px;
+        position: absolute;
+        top: 30px;
+        left: 50%;
+        margin-left: -40px;
+        border: 1px solid #353535;
+        border-radius: 2px;
+        text-align: center;
+        line-height: 30px;
+        display: block;
+      }
+    }
+  }
+
+  //发表评论
+  #evaluate-input{
+    .txt-worn{
+        width: 150px;
+        height: 30px;
+        background-color: #353535;
+        border-radius: 2px;
+        position: fixed;
+        top: 212px;
+        left: 50%;
+        margin-left: -75px;
+        z-index: 2;
+        text-align: center;
+        line-height: 30px;
+        opacity: 0.8;
+        filter:alpha(opacity=80);
+        display: none;
+    }
+    //描述五星评价
+    .description{
+        width: 100%;
+        height: 70px;
+        border-bottom: 1px solid #e4e4e4;
+        padding: 10px 0 0 10px;
+        .goods-img{
+          width: 50px;
+          height: 50px;
+          margin-right: 14px;
+          overflow: hidden;
+          img{
+              width: 50px;
+          }
+        }
+        
+      }
+    //五星
+    .stars{
+          width: 64%;
+          max-width: 240px;
+          height: 32px;
+          position: relative;
+          li{
+              width: 20%;
+              height: 30px;
+              float: left;
+              background-image: url(../img/evaluate/starbg.png);
+              background-position: 12px -22px;
+              background-repeat: no-repeat;
+              background-size: 18px 44px;
+          }
+          
+          .description-txt{
+              position: absolute;
+              top: 32px;
+              left: 13px;
+          }
+        }
+        .star-a{
+              li{
+                background-position: 12px 4px;
+              }
+          }
+    //输入框
+    .evaluate-textarea{
+      width: 100%;
+      height: 90px;
+      padding: 0 10px;
+      textarea{
+        width: 100%;
+        height: 100%;
+        resize: none;
+        overflow-y: auto;
+        outline: none;
+        border: none;
+        font-family: SourceHanSansCN;
+      }
+    }
+    
+    //上传图片
+    .evaluate-imgs{
+        width: 100%;
+        padding: 10px 0 0 10px;
+        .each-img{
+            width: 80px;
+            height: 80px;
+            border: 1px dashed #999;
+            position: relative;
+            margin-bottom: 10px;
+            .del-img{
+                width: 20px;
+                height: 20px;
+                border: 1px solid #fff;
+                border-radius: 10px;
+                background-color: #000;
+                opacity: 0.8;
+                filter:alpha(opacity=80);
+                position: absolute;
+                right: -8px;
+                top: -8px;
+                color: #fff;
+                text-align: center;
+                .del{
+                    width:10px;
+                    height:3px;
+                    background-color:#fff;
+                    position:absolute;
+                    top: 40%;
+                    left: 24%;
+                    margin:auto;
+                }
+            }
+            .no-img{
+                padding-top: 49px;
+                width: 80px;
+                height: 80px;
+                color:#999;
+                font-family: SourceHanSansCN;
+                background-image: url(../img/evaluate/add-photo.png);
+                background-repeat: no-repeat;
+                background-position: center 21px;
+                background-size: 26px 21px;
+            }
+        }
+    }
+    
+    //店铺评分
+    .shop-score{
+        width: 100%;
+        height: 190px;
+        border-bottom: 1px solid #e4e4e4;
+        padding: 10px 0 0 10px;
+        position: relative;
+        margin-bottom: 55px;
+        .shop-icon{
+            height: 14px;
+            position: absolute;
+            top: 13px;
+            left: 10px;
+        }
+        .score{
+            padding-left: 28px;
+        }
+        .shop-stara,.shop-starb,.shop-starc,.shop-stard{
+            position: absolute;
+            display: block;
+            width: 50px;
+            right: -60px;
+            top: 4px;
+            color: #c9c9c9;
+            display: none;
+        }
+    }
+    //提交评价
+    .submit-evaluation{
+        width: 100%;
+        height: 76px;
+        position: relative;
+        button{
+            width: 95%;
+            height: 40px;
+            position: absolute;
+            left: 2.5%;
+            top: 24px;
+        }
+        .anonymous{
+            margin-left: 2.5%;
+            padding-left: 20px;
+            background-image: url(../img/icon/agree/current-black-icon.png);
+            background-repeat: no-repeat;
+            background-size: 14px 14px;
+            background-position: 2px 1px;
+        }
+        .anonymous-cbg{
+            background-image: url(../img/icon/agree/current-agree-icon.png);
+        }
+        .anonymous-txt{
+            margin-right: 2.5%;
+        }
+    }
+    
+    //确认取消
+    .confirm-cancel{
+       display: none;
+       .confirm-cancel-bg{
+        position: absolute;
+        top: 0;
+        left: 0;
+        bottom: 0;
+        width: 100%;
+        z-index: 3;
+        background-color: #000;
+        opacity: 0.4;
+        filter:alpha(opacity=40);
+    }
+    .prompt-box{
+        width: 240px;
+        height: 100px;
+        background-color: #fff;
+        border-radius: 8px;
+        position: absolute;
+        top: 196px;
+        left: 50%;
+        margin-left: -120px;
+        z-index: 4;
+        p{
+            display: block;
+            width: 100%;
+            height: 55px;
+            line-height: 55px;
+            font-family: "SourceHanSansCN Medium";
+            border-bottom: 1px solid #e4e4e4;
+        }
+        button{
+            width: 120px;
+            height: 45px;
+            line-height: 45px;
+        }
+        .prompt-continue{
+            border-right: 1px solid #e4e4e4;
+        }
+    } 
+        
+    }
+    
+    
+  }
+
+
+}

@@ -1,0 +1,209 @@
+@import "mixin.scss";
+
+[data-page~="zeroBuy-channel"]{
+  img{
+    border: 0;
+    display: block;
+    width:100%;
+    vertical-align: middle;
+  }
+  &.main{
+    width:100%;
+    margin-top: 0;
+    max-width: 9999px;
+    overflow:hidden;
+    .loading-round{
+      img{
+        width:77px;
+        display: inline;
+      }
+    }
+    .clearfix{
+      &:after{
+        content: '';
+        display: block;
+        height:0;
+        clear: both;
+      }
+    }
+    .slider{
+      position:relative;
+      width:100%;
+      .slider-touch{
+        width:100%;
+        overflow:hidden;
+        ul{
+          width:1000%;
+          overflow:hidden;
+          li{
+            width:10%;
+            float:left;
+            img{
+              height:200px;
+            }
+          }
+        }
+      }
+      .swiper-pagination{
+        position:absolute;
+        width:100%;
+        bottom:8px;
+        left:0;
+        text-align:center;
+        .swiper-pagination-bullet{
+          display:inline-block;
+          width:6px;
+          height:6px;
+          border:1px solid #FFF;
+          border-radius:50%;
+          margin:0 2px;
+        }
+        .swiper-pagination-bullet-active{
+          background:#fff;
+        }
+      }
+    }
+    .secskill-content{
+      width:100%;
+      overflow:hidden;
+      padding:8px 0;
+      ul{
+          width:600%;
+        li{
+          float:left;
+          text-align:center;
+          width:11.11%;
+          a{
+            display: block;
+            img{
+              display:inline-block;
+              width:80px;
+              height:80px;
+              border-radius: 50%;
+            }
+          }
+          p{
+            font-size:14px;
+          }
+        }
+      }
+    }
+    .item-container{
+      background:#f4f4f4;
+      .clearfix{
+        width:100%;
+        overflow: hidden;
+      }
+      .clearfix:nth-child(1){
+        .apple-area{
+          margin-top: 0;
+        }
+      }
+    }
+    .item-box-container{
+      float: left;
+      width: 49%;
+
+    }
+    .apple-area{
+      margin-top:5px;
+      img{
+        height:150px;
+      }
+    }
+    .item-box{
+      float: left;
+      width: 49%;
+      background: #fff;
+      padding-top:5px;
+      margin:5px 0;
+      &:nth-child(2n-1){
+        margin-left:3px;
+      }
+      &:nth-child(2n){
+        margin-right:3px;
+      }
+      a{
+        display: block;
+        width:100%;
+        color:#353535;
+        img{
+          width: 4.4rem;
+          height: 4.4rem;
+          margin: .26667rem auto;
+        }
+      }
+      .item-des{
+        background:#fff;
+        text-align: left;
+        padding:10px;
+        font-size:14px;
+        .des-text{
+          text-align: left;
+          overflow: hidden;
+          text-overflow: ellipsis;
+          white-space: nowrap;
+        }
+        .des-price{
+          overflow: hidden;
+          padding-top:5px;
+          .p-lf{
+            text-decoration: line-through;
+            color:#999;
+          }
+          .p-at{
+            .p-ay{
+              color:#ff5555;
+            }
+          }
+        }
+      }
+    }
+    .item-box-list{
+      background: #fff;
+      padding-top:5px;
+      margin:5px 0;
+      &:nth-child(2n-1){
+        margin-left:3px;
+      }
+      &:nth-child(2n){
+        margin-right:3px;
+      }
+      a{
+        display: block;
+        width:100%;
+        color:#353535;
+        img{
+          width: 4.4rem;
+          height: 4.4rem;
+          margin: .26667rem auto;
+        }
+      }
+      .item-des{
+        background:#fff;
+        text-align: left;
+        padding:10px;
+        font-size:14px;
+        .des-text{
+          text-align: left;
+          overflow: hidden;
+          text-overflow: ellipsis;
+          white-space: nowrap;
+        }
+        .des-price{
+          overflow: hidden;
+          padding-top:5px;
+          .p-lf{
+            text-decoration: line-through;
+            color:#999;
+          }
+          .p-at{
+            .p-ay{
+              color:#ff5555;
+            }
+          }
+        }
+      }
+    }
+  }
+}
